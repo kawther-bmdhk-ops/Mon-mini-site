@@ -3,88 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="verify-admitad" content="e25b7a563" />
 
-  <title>Mon Mini-Site</title>
+  <!-- ✅ Vérification Admitad -->
+  <meta name="verify-admitad" content="e25ab7a563" />
+
+  <title>Mon univers mode</title>
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      background: #fafafa;
-      color: #333;
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: #ffe6f0;
+      color: #4a0033;
     }
+
     header {
+      background: #ff4fa3;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 34px;
+      font-weight: 600;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+      opacity: 0.95;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background: #ffb3d9;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      background: white;
+      color: #ff2f92;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
       text-align: center;
       margin-bottom: 30px;
+      font-size: 26px;
     }
-    section.produits {
-      margin-top: 30px;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
-    .produit {
-      border: 1px solid #ddd;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      background: #fff;
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
     }
-    .produit h3 {
-      margin: 0 0 5px 0;
-      color: #5d3f6a;
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 18px;
     }
-    .produit a {
+
+    .card p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .card a {
       display: inline-block;
-      margin-top: 10px;
-      padding: 8px 12px;
-      background: #f7d86b;
-      color: #000;
+      margin-top: 15px;
+      padding: 10px 22px;
+      background: #ff4fa3;
+      color: white;
       text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
     }
+
     footer {
       text-align: center;
       font-size: 12px;
-      margin-top: 40px;
-      opacity: 0.7;
+      padding: 30px 15px;
+      background: #ffd1e8;
+      opacity: 0.9;
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Mes recommandations de produits</h1>
-  <p>Bientôt avec des liens affiliés 📌</p>
+  <h1>Mon monde de mode</h1>
+  <p>Mode • Maquillage • Chaussures ✨</p>
 </header>
 
-<section class="produits">
+<nav>
+  <a href="#mode">Mode</a>
+  <a href="#maquillage">Maquillage</a>
+  <a href="#chaussures">Chaussures</a>
+</nav>
 
-  <div class="produit">
-    <h3>Produit 1</h3>
-    <p>Un super produit que j’adore.</p>
-    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
-      Voir le produit
-    </a>
+<section id="mode">
+  <h2>Mode</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Tenue tendance</h3>
+      <p>Look féminin et moderne.</p>
+      <a href="#">Voir le produit</a>
+    </div>
+    <div class="card">
+      <h3>Accessoire chic</h3>
+      <p>Le détail qui change tout.</p>
+      <a href="#">Voir le produit</a>
+    </div>
   </div>
+</section>
 
-  <div class="produit">
-    <h3>Produit 2</h3>
-    <p>Un autre produit intéressant.</p>
-    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
-      Voir le produit
-    </a>
+<section id="maquillage">
+  <h2>Maquillage</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Rouge à lèvres</h3>
+      <p>Couleur intense et tenue parfaite.</p>
+      <a href="#">Voir le produit</a>
+    </div>
+    <div class="card">
+      <h3>Palette yeux</h3>
+      <p>Pour tous les looks.</p>
+      <a href="#">Voir le produit</a>
+    </div>
   </div>
+</section>
 
-  <div class="produit">
-    <h3>Produit 3</h3>
-    <p>Encore un coup de cœur !</p>
-    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
-      Voir le produit
-    </a>
+<section id="chaussures">
+  <h2>Chaussures</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Baskets stylées</h3>
+      <p>Confort & tendance.</p>
+      <a href="#">Voir le produit</a>
+    </div>
+    <div class="card">
+      <h3>Talons élégants</h3>
+      <p>Pour briller en soirée.</p>
+      <a href="#">Voir le produit</a>
+    </div>
   </div>
-
 </section>
 
 <footer>
