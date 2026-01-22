@@ -1,182 +1,304 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Jasmin</title>
 
-  <!-- ✅ Vérification Admitad -->
-  <meta name="verify-admitad" content="e25ab7a563" />
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <title>Mon univers mode</title>
+<style>
+  :root{
+    --rose-fuchsia:#ff2b8a;
+    --rose-clair:#ffd1e8;
+    --vert-matcha:#9ccf6d;
+    --text:#1f1f1f;
+    --border:#f4d6e2;
+  }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", Arial, sans-serif;
-      background: #ffe6f0;
-      color: #4a0033;
-    }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Poppins',sans-serif;
+    color:var(--text);
+    background:
+      linear-gradient(180deg, #fff 0%, #fff 100%),
+      repeating-linear-gradient(
+        45deg,
+        #ffffff 0px,
+        #ffffff 30px,
+        var(--vert-matcha) 30px,
+        var(--vert-matcha) 60px
+      );
+    background-size: 100% 100%;
+  }
 
-    header {
-      background: #ff4fa3;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
+  body::before{
+    content:"";
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(255,209,232,0.55);
+    pointer-events:none;
+    z-index:-1;
+  }
 
-    header h1 {
-      margin: 0;
-      font-size: 34px;
-      font-weight: 600;
-    }
+  header{
+    padding:18px 18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    position:sticky;
+    top:0;
+    z-index:10;
+    border-bottom:1px solid var(--border);
+  }
 
-    header p {
-      margin-top: 10px;
-      font-size: 16px;
-      opacity: 0.95;
-    }
+  .logo{
+    font-family:'Dancing Script', cursive;
+    font-size:34px;
+    font-weight:700;
+    color:var(--rose-fuchsia);
+    letter-spacing:1px;
+    text-shadow:
+      2px 2px 0 rgba(156,207,109,0.2),
+      4px 4px 0 rgba(255,43,138,0.15);
+  }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      background: #ffb3d9;
-      padding: 15px;
-      flex-wrap: wrap;
-    }
+  nav a{
+    margin-left:16px;
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    font-size:14px;
+  }
 
-    nav a {
-      text-decoration: none;
-      background: white;
-      color: #ff2f92;
-      padding: 10px 18px;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 14px;
-    }
+  .btn{
+    padding:10px 14px;
+    border:2px solid var(--rose-fuchsia);
+    background:transparent;
+    border-radius:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+  }
+  .btn:hover{
+    background:var(--rose-fuchsia);
+    color:#fff;
+  }
 
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+  .hero{
+    padding:90px 18px 50px;
+    text-align:center;
+    background: linear-gradient(135deg, rgba(255,43,138,0.35), rgba(156,207,109,0.25));
+    border-bottom:1px solid var(--border);
+    color:#fff;
+  }
+  .hero h1{
+    font-family:'Dancing Script', cursive;
+    font-size:60px;
+    margin-bottom:12px;
+    color:var(--rose-fuchsia);
+    text-shadow:
+      3px 3px 0 rgba(0,0,0,0.2),
+      6px 6px 0 rgba(156,207,109,0.25);
+  }
+  .hero p{
+    font-size:18px;
+    margin-bottom:20px;
+    max-width:720px;
+    margin-left:auto;
+    margin-right:auto;
+    color:#333;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
 
-    section h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 26px;
-    }
+  .hero .cta{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+  }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+  .btn-primary{
+    background:var(--rose-fuchsia);
+    color:#fff;
+    border-color:var(--rose-fuchsia);
+  }
+  .btn-primary:hover{
+    background:#fff;
+    color:var(--rose-fuchsia);
+    border-color:var(--rose-fuchsia);
+  }
 
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 20px;
-      text-align: center;
-    }
+  .section{
+    padding:40px 18px;
+  }
+  .section h2{
+    font-family:'Dancing Script', cursive;
+    font-size:34px;
+    margin-bottom:18px;
+    color:var(--rose-fuchsia);
+    text-shadow:
+      2px 2px 0 rgba(156,207,109,0.2);
+  }
 
-    .card h3 {
-      margin-top: 0;
-      font-size: 18px;
-    }
+  .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
 
-    .card p {
-      font-size: 14px;
-      opacity: 0.8;
-    }
+  .card{
+    background:rgba(255,255,255,0.85);
+    border:2px solid var(--border);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+    position:relative;
+  }
 
-    .card a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 22px;
-      background: #ff4fa3;
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      font-size: 14px;
-      font-weight: 600;
-    }
+  .card::after{
+    content:"";
+    position:absolute;
+    top:-20px; right:-20px;
+    width:90px; height:90px;
+    background:radial-gradient(circle, rgba(255,43,138,0.25) 0%, transparent 70%);
+    pointer-events:none;
+  }
 
-    footer {
-      text-align: center;
-      font-size: 12px;
-      padding: 30px 15px;
-      background: #ffd1e8;
-      opacity: 0.9;
-    }
-  </style>
+  .card-body{
+    padding:18px;
+  }
+  .card-title{
+    font-family:'Dancing Script', cursive;
+    font-size:24px;
+    margin-bottom:8px;
+    color:var(--rose-fuchsia);
+  }
+  .card-text{
+    font-size:14px;
+    color:#666;
+    margin-bottom:12px;
+  }
+  .card .btn{
+    border-radius:16px;
+  }
+
+  .banner{
+    margin:40px 0;
+    padding:30px 18px;
+    background:linear-gradient(135deg, #fff, rgba(156,207,109,0.25));
+    border-radius:26px;
+    text-align:center;
+    border:2px solid var(--border);
+  }
+  .banner h2{
+    font-family:'Dancing Script', cursive;
+    font-size:32px;
+    margin-bottom:8px;
+    color:var(--rose-fuchsia);
+    text-shadow: 2px 2px 0 rgba(156,207,109,0.2);
+  }
+  .banner p{
+    font-size:16px;
+    color:#444;
+  }
+
+  footer{
+    padding:25px 18px;
+    background:rgba(255,255,255,0.85);
+    border-top:1px solid var(--border);
+    text-align:center;
+  }
+  footer p{
+    color:#777;
+    font-size:14px;
+  }
+
+  @media(max-width:900px){
+    .grid{grid-template-columns:1fr;}
+    .hero h1{font-size:46px;}
+  }
+</style>
 </head>
-
 <body>
 
 <header>
-  <h1>Mon monde de mode</h1>
-  <p>Mode • Maquillage • Chaussures ✨</p>
+  <div class="logo">Studio Jasmin</div>
+  <nav>
+    <a href="#shop">Boutique</a>
+    <a href="#brow">Brow Lift</a>
+    <a href="#access">Accessoires</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="btn" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Pinterest</button>
 </header>
 
-<nav>
-  <a href="#mode">Mode</a>
-  <a href="#maquillage">Maquillage</a>
-  <a href="#chaussures">Chaussures</a>
-</nav>
+<section class="hero">
+  <h1>Beauté & style en mode girly</h1>
+  <p>Brow lift • Rehaussement de cils • Accessoires mode</p>
+  <div class="cta">
+    <button class="btn btn-primary" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Découvrir la boutique</button>
+    <button class="btn" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Voir les looks</button>
+  </div>
+</section>
 
-<section id="mode">
-  <h2>Mode</h2>
+<section class="section" id="shop">
+  <h2>Nos collections</h2>
   <div class="grid">
     <div class="card">
-      <h3>Tenue tendance</h3>
-      <p>Look féminin et moderne.</p>
-      <a href="#">Voir le produit</a>
+      <div class="card-body">
+        <div class="card-title">Voiles & accessoires</div>
+        <div class="card-text">Voiles élégants & accessoires tendance</div>
+        <button class="btn" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Voir la collection</button>
+      </div>
     </div>
     <div class="card">
-      <h3>Accessoire chic</h3>
-      <p>Le détail qui change tout.</p>
-      <a href="#">Voir le produit</a>
+      <div class="card-body">
+        <div class="card-title">Textile & looks</div>
+        <div class="card-text">Looks chics, simples & modernes</div>
+        <button class="btn" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Voir la collection</button>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="maquillage">
-  <h2>Maquillage</h2>
+<section class="section" id="access">
+  <h2>Accessoires</h2>
   <div class="grid">
     <div class="card">
-      <h3>Rouge à lèvres</h3>
-      <p>Couleur intense et tenue parfaite.</p>
-      <a href="#">Voir le produit</a>
+      <div class="card-body">
+        <div class="card-title">Accessoires téléphone</div>
+        <div class="card-text">Coques & accessoires stylés</div>
+        <button class="btn" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Voir la collection</button>
+      </div>
     </div>
     <div class="card">
-      <h3>Palette yeux</h3>
-      <p>Pour tous les looks.</p>
-      <a href="#">Voir le produit</a>
+      <div class="card-body">
+        <div class="card-title">Bijoux & détails</div>
+        <div class="card-text">Bijoux & détails qui font la différence</div>
+        <button class="btn" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Voir la collection</button>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="chaussures">
-  <h2>Chaussures</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Baskets stylées</h3>
-      <p>Confort & tendance.</p>
-      <a href="#">Voir le produit</a>
-    </div>
-    <div class="card">
-      <h3>Talons élégants</h3>
-      <p>Pour briller en soirée.</p>
-      <a href="#">Voir le produit</a>
-    </div>
-  </div>
+<div class="banner" id="brow">
+  <h2>Brow Lift & Rehaussement de cils</h2>
+  <p>Regard sublimé • Résultats naturels • 1h</p>
+</div>
+
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email : kawther-bmdhk@hotmail.com</p>
+  <p>Pinterest : <a href="https://pin.it/S8umJ0eeK" target="_blank">Studio Jasmin</a></p>
 </section>
 
 <footer>
-  Certains liens présents sur ce site peuvent être affiliés.
+  <p>© 2026 Studio Jasmin • Boutique & Beauté</p>
 </footer>
 
 </body>
-<p>for Admitad 21/01/2026</p>
-</html> 
+</html>
