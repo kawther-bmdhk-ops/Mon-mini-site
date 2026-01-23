@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Jasmin</title>
+<title>Jasmin Shop</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -21,7 +21,6 @@
     font-family:'Poppins',sans-serif;
     color:var(--text);
     background:
-      linear-gradient(180deg, #fff 0%, #fff 100%),
       repeating-linear-gradient(
         45deg,
         #ffffff 0px,
@@ -30,16 +29,6 @@
         var(--vert-matcha) 60px
       );
     background-size: 100% 100%;
-  }
-
-  body::before{
-    content:"";
-    position:fixed;
-    top:0; left:0;
-    width:100%; height:100%;
-    background: rgba(255,209,232,0.55);
-    pointer-events:none;
-    z-index:-1;
   }
 
   header{
@@ -60,10 +49,6 @@
     font-size:34px;
     font-weight:700;
     color:var(--rose-fuchsia);
-    letter-spacing:1px;
-    text-shadow:
-      2px 2px 0 rgba(156,207,109,0.2),
-      4px 4px 0 rgba(255,43,138,0.15);
   }
 
   nav a{
@@ -82,6 +67,8 @@
     font-weight:700;
     cursor:pointer;
     transition:0.3s;
+    text-decoration:none;
+    color:#333;
   }
   .btn:hover{
     background:var(--rose-fuchsia);
@@ -100,9 +87,6 @@
     font-size:60px;
     margin-bottom:12px;
     color:var(--rose-fuchsia);
-    text-shadow:
-      3px 3px 0 rgba(0,0,0,0.2),
-      6px 6px 0 rgba(156,207,109,0.25);
   }
   .hero p{
     font-size:18px;
@@ -111,10 +95,9 @@
     margin-left:auto;
     margin-right:auto;
     color:#333;
-    text-shadow: 0 3px 10px rgba(0,0,0,0.1);
   }
 
-  .hero .cta{
+  .cta{
     display:flex;
     justify-content:center;
     gap:12px;
@@ -140,8 +123,6 @@
     font-size:34px;
     margin-bottom:18px;
     color:var(--rose-fuchsia);
-    text-shadow:
-      2px 2px 0 rgba(156,207,109,0.2);
   }
 
   .grid{
@@ -156,16 +137,6 @@
     border-radius:24px;
     overflow:hidden;
     box-shadow:0 12px 30px rgba(0,0,0,0.08);
-    position:relative;
-  }
-
-  .card::after{
-    content:"";
-    position:absolute;
-    top:-20px; right:-20px;
-    width:90px; height:90px;
-    background:radial-gradient(circle, rgba(255,43,138,0.25) 0%, transparent 70%);
-    pointer-events:none;
   }
 
   .card-body{
@@ -186,24 +157,38 @@
     border-radius:16px;
   }
 
-  .banner{
-    margin:40px 0;
-    padding:30px 18px;
-    background:linear-gradient(135deg, #fff, rgba(156,207,109,0.25));
-    border-radius:26px;
-    text-align:center;
+  .products{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+
+  .product-card{
+    background:rgba(255,255,255,0.9);
     border:2px solid var(--border);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+    text-align:center;
   }
-  .banner h2{
+  .product-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+  }
+  .product-card h3{
     font-family:'Dancing Script', cursive;
-    font-size:32px;
-    margin-bottom:8px;
+    font-size:24px;
+    margin:14px 0 8px;
     color:var(--rose-fuchsia);
-    text-shadow: 2px 2px 0 rgba(156,207,109,0.2);
   }
-  .banner p{
-    font-size:16px;
+  .product-card .price{
+    font-size:18px;
     color:#444;
+    margin-bottom:12px;
+  }
+  .product-card .btn{
+    margin-bottom:18px;
   }
 
   footer{
@@ -219,6 +204,7 @@
 
   @media(max-width:900px){
     .grid{grid-template-columns:1fr;}
+    .products{grid-template-columns:1fr;}
     .hero h1{font-size:46px;}
   }
 </style>
@@ -226,41 +212,39 @@
 <body>
 
 <header>
-  <div class="logo">Studio Jasmin</div>
+  <div class="logo">Jasmin Shop</div>
   <nav>
     <a href="#shop">Boutique</a>
-    <a href="#brow">Brow Lift</a>
     <a href="#access">Accessoires</a>
     <a href="#contact">Contact</a>
   </nav>
-  <button class="btn" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Pinterest</button>
+  <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005009995731661.html" target="_blank">Voir la coque</a>
 </header>
 
 <section class="hero">
   <h1>Beauté & style en mode girly</h1>
-  <p>Brow lift • Rehaussement de cils • Accessoires mode</p>
+  <p>Coques, accessoires et petites trouvailles girly 💗</p>
   <div class="cta">
-    <button class="btn btn-primary" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Découvrir la boutique</button>
-    <button class="btn" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Voir les looks</button>
+    <a class="btn btn-primary" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005009995731661.html" target="_blank">Acheter la coque</a>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005008737264509.html" target="_blank">Voir le foulard</a>
   </div>
 </section>
 
 <section class="section" id="shop">
-  <h2>Nos collections</h2>
-  <div class="grid">
-    <div class="card">
-      <div class="card-body">
-        <div class="card-title">Voiles & accessoires</div>
-        <div class="card-text">Voiles élégants & accessoires tendance</div>
-        <button class="btn" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Voir la collection</button>
-      </div>
+  <h2>Nos sélections</h2>
+  <div class="products">
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/HTB1Y5Z0b4naK1RjSZFtq6yYdVXat.jpg" alt="Coque ventouse rose">
+      <h3>Phone Case with Suction Cups</h3>
+      <p class="price">€0.99</p>
+      <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005009995731661.html" target="_blank">Acheter</a>
     </div>
-    <div class="card">
-      <div class="card-body">
-        <div class="card-title">Textile & looks</div>
-        <div class="card-text">Looks chics, simples & modernes</div>
-        <button class="btn" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Voir la collection</button>
-      </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Scarf Accessory">
+      <h3>Scarf Accessory</h3>
+      <p class="price">€7.93</p>
+      <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005008737264509.html" target="_blank">Acheter</a>
     </div>
   </div>
 </section>
@@ -270,34 +254,29 @@
   <div class="grid">
     <div class="card">
       <div class="card-body">
-        <div class="card-title">Accessoires téléphone</div>
-        <div class="card-text">Coques & accessoires stylés</div>
-        <button class="btn" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Voir la collection</button>
+        <div class="card-title">Bijoux & détails</div>
+        <div class="card-text">Petits accessoires pour un style girly parfait</div>
+        <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005009995731661.html" target="_blank">Voir</a>
       </div>
     </div>
     <div class="card">
       <div class="card-body">
-        <div class="card-title">Bijoux & détails</div>
-        <div class="card-text">Bijoux & détails qui font la différence</div>
-        <button class="btn" onclick="window.location.href='https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/'">Voir la collection</button>
+        <div class="card-title">Coques & gadgets</div>
+        <div class="card-text">Coques stylées, pratiques et tendances</div>
+        <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005008737264509.html" target="_blank">Voir</a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="banner" id="brow">
-  <h2>Brow Lift & Rehaussement de cils</h2>
-  <p>Regard sublimé • Résultats naturels • 1h</p>
-</div>
-
 <section class="section" id="contact">
   <h2>Contact</h2>
   <p>Email : kawther-bmdhk@hotmail.com</p>
-  <p>Pinterest : <a href="https://pin.it/S8umJ0eeK" target="_blank">Studio Jasmin</a></p>
+  <p>Pinterest : <a href="https://pin.it/S8umJ0eeK" target="_blank">Jasmin Shop</a></p>
 </section>
 
 <footer>
-  <p>© 2026 Studio Jasmin • Boutique & Beauté</p>
+  <p>© 2026 Jasmin Shop • Boutique & Beauté</p>
 </footer>
 
 </body>
