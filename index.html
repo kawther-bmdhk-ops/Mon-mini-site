@@ -2,94 +2,229 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Jasmin Shop</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Studio Jasmin</title>
+  <style>
+    /* Fond rayé vert/blanc */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: repeating-linear-gradient(
+        45deg,
+        #ffffff,
+        #ffffff 50px,
+        #8ebf88 50px,
+        #8ebf88 100px
+      );
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #ff3399; /* rose flashy */
+      margin: 0;
+      font-size: 2em;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #ff3399;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+      background-color: #ff3399;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      color: #ff3399;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .product {
+      border: 2px solid #ff3399;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 25px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .product h2 {
+      color: #ff3399;
+      margin-top: 0;
+    }
+
+    .product p {
+      color: #333;
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+
+    .product a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #ff3399;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .product a:hover {
+      background-color: #ffffff;
+      color: #ff3399;
+      border: 2px solid #ff3399;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+      color: #ff3399;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Bienvenue sur Jasmin Shop</h1>
+    <h1>Studio Jasmin</h1>
+    <nav>
+      <a href="#coques">Boutique</a>
+      <a href="#accessoires">Accessoires</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <!-- Début des produits -->
 
-    <!-- Produit Bijou 1 : Bracelets dorés -->
-    <div class="product">
-      <h2>Bracelets dorés</h2>
-      <p>Élégants et intemporels, ces bracelets dorés s’accordent avec toutes vos tenues, pour le quotidien ou les occasions spéciales.</p>
-      <a href="https://fr.aliexpress.com/item/1005009936139322.html" target="_blank">Shop Now</a>
-      <img src="images/bracelet1.jpg" alt="Elegant gold bracelets, stylish everyday accessory, chic jewelry" />
-    </div>
+    <h2 class="section-title">Beauté & style en mode girly 💗</h2>
+    <p style="text-align:center;">Coques, accessoires et petites trouvailles girly</p>
 
-    <!-- Produit Bijou 2 : Bracelets dorés (numéro 2) -->
-    <div class="product">
-      <h2>Bracelets dorés</h2>
-      <p>Élégants et intemporels, ces bracelets dorés s’accordent avec toutes vos tenues, pour le quotidien ou les occasions spéciales.</p>
-      <a href="https://fr.aliexpress.com/item/1005009676852764.html" target="_blank">Shop Now</a>
-      <img src="images/bracelet2.jpg" alt="Elegant gold bracelets, stylish everyday accessory, chic jewelry" />
-    </div>
+    <!-- Coques -->
+    <section id="coques">
+      <h2 class="section-title">Nos sélections - Coques & Gadgets</h2>
 
-    <!-- Produit Accessoire 1 : Coque ventouse minimaliste -->
-    <div class="product">
-      <h2>Coque ventouse minimaliste</h2>
-      <p>Coque pratique avec ventouse, design minimaliste, parfaite pour une utilisation quotidienne.</p>
-      <a href="https://fr.aliexpress.com/item/1005010096975013.html" target="_blank">Shop Now</a>
-      <img src="images/coque1.jpg" alt="Minimalist suction phone case, secure grip, stylish phone accessory" />
-    </div>
+      <!-- Produit 1 -->
+      <div class="product">
+        <h2>Coque ventouse rose</h2>
+        <p>Coque iPhone rose avec ventouses + foulard assorti (AliExpress)</p>
+        <a href="https://fr.aliexpress.com/item/1005009936139322.html" target="_blank">Acheter la coque</a>
+        <img src="images/coque1.jpg" alt="Coque ventouse rose iPhone girly avec foulard assorti" />
+      </div>
 
-    <!-- Produit Accessoire 2 : Porte-clé décoratif -->
-    <div class="product">
-      <h2>Porte-clé décoratif pour sac/téléphone</h2>
-      <p>Porte-clé stylé qui ajoute de la personnalité à votre sac ou téléphone.</p>
-      <a href="https://fr.aliexpress.com/item/1005006974079958.html" target="_blank">Shop Now</a>
-      <img src="images/porte-cle1.jpg" alt="Decorative keychain accessory, stylish and practical" />
-    </div>
+      <!-- Produit 2 -->
+      <div class="product">
+        <h2>Coque iPhone rose + accessoires</h2>
+        <p>Découvre d’autres accessoires girly tendances (AliExpress)</p>
+        <a href="https://fr.aliexpress.com/item/1005009676852764.html" target="_blank">Voir les offres</a>
+        <img src="images/coque2.jpg" alt="Coque iPhone rose avec accessoires girly" />
+      </div>
+    </section>
 
-    <!-- Produit Accessoire 3 : Accessoire téléphone chic -->
-    <div class="product">
-      <h2>Accessoire téléphone chic</h2>
-      <p>Accessoire moderne et tendance pour téléphone, parfait pour compléter votre style.</p>
-      <a href="https://fr.aliexpress.com/item/1005009913120132.html" target="_blank">Shop Now</a>
-      <img src="images/accessoire1.jpg" alt="Chic phone accessory, modern design, everyday essential" />
-    </div>
+    <!-- Accessoires -->
+    <section id="accessoires">
+      <h2 class="section-title">Accessoires & Bijoux</h2>
 
-    <!-- Produit Voile : Voile léger et élégant -->
-    <div class="product">
-      <h2>Voile léger et élégant</h2>
-      <p>Voile léger pour compléter votre look modeste. Élégant et polyvalent.</p>
-      <a href="https://fr.aliexpress.com/ssr/300000512/BundleDeals2?productIds=1005004217644400:12000035639307000" target="_blank">Shop Now</a>
-      <img src="images/voile1.jpg" alt="Lightweight elegant veil, modest fashion accessory, versatile styling" />
-    </div>
+      <!-- Produit 3 -->
+      <div class="product">
+        <h2>Bracelets dorés</h2>
+        <p>Élégants et intemporels, parfait pour un style girly</p>
+        <a href="https://fr.aliexpress.com/item/1005009913120132.html" target="_blank">Acheter</a>
+        <img src="images/bracelet1.jpg" alt="Bracelets dorés girly" />
+      </div>
 
-    <!-- Produit Sac 1 : Sac style minimaliste -->
-    <div class="product">
-      <h2>Sac style minimaliste</h2>
-      <p>Sac élégant et minimaliste, parfait pour le quotidien ou les sorties.</p>
-      <a href="https://fr.aliexpress.com/item/1005010675497010.html" target="_blank">Shop Now</a>
-      <img src="images/sac1.jpg" alt="Minimalist handbag, chic everyday bag, versatile fashion accessory" />
-    </div>
+      <!-- Produit 4 -->
+      <div class="product">
+        <h2>Porte-clé décoratif</h2>
+        <p>Ajoute de la personnalité à ton sac ou téléphone</p>
+        <a href="https://fr.aliexpress.com/item/1005006974079958.html" target="_blank">Voir</a>
+        <img src="images/porte-cle1.jpg" alt="Porte-clé décoratif girly" />
+      </div>
 
-    <!-- Produit Sac 2 : Sac imitation luxe -->
-    <div class="product">
-      <h2>Sac imitation luxe</h2>
-      <p>Sac élégant inspiré des designs de luxe, sans logos visibles.</p>
-      <a href="https://fr.aliexpress.com/item/1005009708176265.html" target="_blank">Shop Now</a>
-      <img src="images/sac2.jpg" alt="Elegant handbag, luxury-inspired, versatile accessory" />
-    </div>
+      <!-- Produit 5 -->
+      <div class="product">
+        <h2>Accessoire téléphone chic</h2>
+        <p>Accessoire moderne et tendance pour téléphone</p>
+        <a href="https://fr.aliexpress.com/item/1005010096975013.html" target="_blank">Voir</a>
+        <img src="images/accessoire1.jpg" alt="Accessoire téléphone girly" />
+      </div>
+    </section>
 
-    <!-- Produit Sac 3 : Sac imitation classique -->
-    <div class="product">
-      <h2>Sac imitation classique</h2>
-      <p>Sac chic et polyvalent, inspiré des classiques du design.</p>
-      <a href="https://fr.aliexpress.com/item/1005010425463330.html" target="_blank">Shop Now</a>
-      <img src="images/sac3.jpg" alt="Classic-inspired handbag, stylish and practical, fashion accessory" />
-    </div>
+    <!-- Voiles -->
+    <section id="voiles">
+      <h2 class="section-title">Voiles & Tenues</h2>
 
-    <!-- Fin des produits -->
+      <!-- Produit 6 -->
+      <div class="product">
+        <h2>Voile léger et élégant</h2>
+        <p>Voile léger pour compléter ton look modeste</p>
+        <a href="https://fr.aliexpress.com/ssr/300000512/BundleDeals2?productIds=1005004217644400:12000035639307000" target="_blank">Voir</a>
+        <img src="images/voile1.jpg" alt="Voile léger girly" />
+      </div>
+    </section>
+
+    <!-- Sacs -->
+    <section id="sacs">
+      <h2 class="section-title">Sacs à main</h2>
+
+      <!-- Produit 7 -->
+      <div class="product">
+        <h2>Sac style minimaliste</h2>
+        <p>Sac élégant et minimaliste, parfait pour le quotidien</p>
+        <a href="https://fr.aliexpress.com/item/1005010675497010.html" target="_blank">Voir</a>
+        <img src="images/sac1.jpg" alt="Sac style minimaliste girly" />
+      </div>
+
+      <!-- Produit 8 -->
+      <div class="product">
+        <h2>Sac imitation luxe</h2>
+        <p>Sac élégant inspiré des designs de luxe, sans logos visibles</p>
+        <a href="https://fr.aliexpress.com/item/1005009708176265.html" target="_blank">Voir</a>
+        <img src="images/sac2.jpg" alt="Sac imitation luxe girly" />
+      </div>
+
+      <!-- Produit 9 -->
+      <div class="product">
+        <h2>Sac imitation classique</h2>
+        <p>Sac chic et polyvalent, inspiré des classiques du design</p>
+        <a href="https://fr.aliexpress.com/item/1005010425463330.html" target="_blank">Voir</a>
+        <img src="images/sac3.jpg" alt="Sac imitation classique girly" />
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>© 2026 Jasmin Shop</p>
+  <footer id="contact">
+    <p>Email : kawther-bmdhk@hotmail.com</p>
+    <p>Pinterest : <a href="https://www.pinterest.com/studiojasmin/" target="_blank">Studio Jasmin</a></p>
+    <p>© 2026 Studio Jasmin • Boutique & Beauté</p>
   </footer>
+
 </body>
 </html>
