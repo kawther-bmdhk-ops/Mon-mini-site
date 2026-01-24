@@ -73,3 +73,32 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 30px;
+  /* Fond du site */
+body {
+    background-color: #f8f3f0; /* un rose clair, exemple */
+    font-family: Arial, sans-serif;
+}
+
+/* Titres et headers */
+header h1 {
+    color: #8ebf88; /* vert matcha */
+}
+
+/* Liens et boutons */
+a {
+    color: #f28ab2; /* rose plus vif pour les liens */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8ebf88; /* vert matcha au survol */
+}
+
+/* Blocs produits */
+.product {
+    border: 1px solid #f2e8e4; /* léger contour rose clair */
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* blanc pour les cartes produits */
+    border-radius: 10px;
+}
