@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Studio Jasmin</title>
+  
+  <!-- Police Dancing Script -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    /* Fond rayé vert/blanc */
+    /* Général */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Dancing Script', cursive;
       background: repeating-linear-gradient(
         45deg,
         #ffffff,
@@ -17,18 +21,28 @@
       );
     }
 
+    /* Header */
     header {
-      background-color: #ffffff;
+      background: repeating-linear-gradient(
+        45deg,
+        #ffffff,
+        #ffffff 50px,
+        #8ebf88 50px,
+        #8ebf88 100px
+      );
       padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     header h1 {
       color: #ff3399; /* rose flashy */
       margin: 0;
-      font-size: 2em;
+      font-size: 2.5em;
     }
 
     nav a {
@@ -36,13 +50,15 @@
       text-decoration: none;
       color: #ff3399;
       font-weight: bold;
+      font-size: 1.2em;
     }
 
     nav a:hover {
       color: #ffffff;
       background-color: #ff3399;
-      padding: 5px 10px;
+      padding: 5px 12px;
       border-radius: 5px;
+      transition: 0.3s;
     }
 
     main {
@@ -53,7 +69,7 @@
 
     .section-title {
       color: #ff3399;
-      font-size: 1.8em;
+      font-size: 2em;
       margin-bottom: 15px;
       text-align: center;
     }
@@ -64,7 +80,7 @@
       padding: 15px;
       margin-bottom: 25px;
       background-color: #ffffff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 8px rgba(255,51,153,0.2);
       text-align: center;
     }
 
@@ -75,6 +91,7 @@
 
     .product p {
       color: #333;
+      font-size: 1.1em;
     }
 
     .product img {
@@ -93,6 +110,7 @@
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     .product a:hover {
@@ -103,10 +121,11 @@
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       background-color: #ffffff;
       color: #ff3399;
       margin-top: 50px;
+      font-size: 1.1em;
     }
   </style>
 </head>
@@ -124,7 +143,7 @@
   <main>
 
     <h2 class="section-title">Beauté & style en mode girly 💗</h2>
-    <p style="text-align:center;">Coques, accessoires et petites trouvailles girly</p>
+    <p style="text-align:center; font-size:1.2em;">Coques, accessoires et petites trouvailles girly</p>
 
     <!-- Coques -->
     <section id="coques">
