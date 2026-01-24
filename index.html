@@ -1,161 +1,185 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Jasmin</title>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Jasmin - Accessoires & Coques Girly</title>
+  <style>
     body {
-        font-family: 'Dancing Script', cursive;
-        background: repeating-linear-gradient(45deg, #d4f0e1, #d4f0e1 20px, #ffffff 20px, #ffffff 40px);
-        margin: 0;
-        padding: 0;
-        color: #ff2d55;
-        text-align: center;
+      font-family: 'Dancing Script', cursive; /* police girly */
+      background: repeating-linear-gradient(45deg, #c8facc, #c8facc 20px, #ffffff 20px, #ffffff 40px); /* rayures vertes et blanches */
+      color: #ff69b4; /* rose flashy */
+      margin: 0;
+      padding: 0;
     }
-    header {
-        background-color: #ff99cc;
-        padding: 20px;
-        font-size: 2em;
-        font-weight: bold;
-    }
-    nav {
-        background-color: #ffffff;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-    }
-    nav a {
-        text-decoration: none;
-        color: #ff2d55;
-        font-weight: bold;
-    }
+
     .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
     }
-    .item {
-        background-color: #ffffff;
-        border: 2px solid #ff99cc;
-        border-radius: 15px;
-        padding: 10px;
-        width: 220px;
-        transition: transform 0.3s;
+
+    .produit {
+      background: #ffffff;
+      border: 2px solid #ff69b4;
+      border-radius: 15px;
+      width: 250px;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
     }
-    .item:hover {
-        transform: scale(1.05);
+
+    .produit:hover {
+      transform: scale(1.05);
     }
-    .item img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px;
+
+    .produit img {
+      width: 100%;
+      border-radius: 10px;
     }
-    .buy-btn {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 15px;
-        background-color: #ff2d55;
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 10px;
+
+    .produit h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1rem;
     }
-</style>
+
+    .produit p {
+      font-size: 0.9rem;
+      color: #ff1493; /* rose pétant */
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+  </style>
 </head>
 <body>
-<header>Studio Jasmin</header>
-<nav>
-    <a href="#bijoux">Bijoux</a>
-    <a href="#coques">Coques</a>
-    <a href="#accessoires">Accessoires</a>
-    <a href="#sacs">Sacs</a>
-    <a href="#voiles">Voiles</a>
-</nav>
+  <header>
+    <h1 style="text-align:center; padding:20px;">Studio Jasmin 💗</h1>
+  </header>
 
-<div class="container" id="bijoux">
-    <h2>Bijoux</h2> 
-    <div class="item">
-        <img src="images/bijou1.jpg" alt="Bijou 1">
-        <a href="https://fr.aliexpress.com/item/1005009913120132.html?spm=a2g0o.productlist.main.14.dd83kuY8kuY8Pp" class="buy-btn" target="_blank">Acheter</a>
-    </div>
-    <div class="item">
-        <img src="images/bracelet1.jpg" alt="Bracelet 1">
-        <a href="https://fr.aliexpress.com/item/1005009936139322.html?spm=a2g0o.productlist.main.34.6167GKXvGKXvCI" class="buy-btn" target="_blank">Acheter</a>
-    </div>
-    <div class="item">
-        <img src="images/bracelet2.jpg" alt="Bracelet 2">
-        <a href="https://fr.aliexpress.com/item/1005009676852764.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.12.2b05zyshzyshrG" class="buy-btn" target="_blank">Acheter</a>
-    </div>
-</div>
-
-<div class="container" id="coques">
-    <h2>Coques</h2>
-    <div class="item">
-        <img src="images/coque1.jpg" alt="Coque 1">
-        <a href="https://fr.aliexpress.com/item/1005009995731661.html?spm=a2g0o.productlist.main.5.9c9fANg9ANg9OE" class="buy-btn" target="_blank">Acheter</a>
-    </div>
-    <div class="item">
-        <img src="images/coque2.jpg" alt="Coque 2">
-        <a href="https://fr.aliexpress.com/item/1005010096975013.html?spm=a2g0o.detail.pcDetailBottomMoreOtherSeller.35.db6cDkGtDkGt8N" class="buy-btn" target="_blank">Acheter</a>
-    </div>
-</div>
+  <div class="container">
+    <!-- Bijou 1 -->
     <div class="produit">
-  <a href="https://kawther-bmdhk-ops.github.io/Mon-mini-site/">
-    <img src="images/coque-accessoires.jpg" alt="Montage de coques et accessoires girly" width="300" />
-  </a>
-  <h3>Coques & accessoires girly</h3>
-  <p>Une sélection colorée de coques et accessoires pour téléphone, parfait pour un style girly 💗</p>
-</div>
+      <a href="https://fr.aliexpress.com/item/1005009913120132.html">
+        <img src="images/bijou1.jpg" alt="Bijou girly 1" />
+      </a>
+      <h3>Bijou 1</h3>
+      <p>Petit bijou tendance pour un look girly parfait 💖</p>
+    </div>
 
-<div class="container" id="accessoires">
-    <h2>Accessoires</h2>
-    <div class="item">
-        <img src="images/foulard1.jpg" alt="Foulard 1">
-        <a href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F1005008737264509.html" class="buy-btn" target="_blank">Acheter</a>
+    <!-- Bracelet 1 -->
+    <div class="produit">
+      <a href="https://fr.aliexpress.com/item/1005009936139322.html">
+        <img src="images/bracelet1.jpg" alt="Bracelet girly 1" />
+      </a>
+      <h3>Bracelet 1</h3>
+      <p>Bracelet girly coloré et chic ✨</p>
     </div>
-    <div class="item">
-        <img src="images/foulard2.jpg" alt="Foulard 2">
-        <a href="https://fr.aliexpress.com/item/1005006974079958.html?spm=a2g0o.tm1000036283.d0.1.1a364aab4PvbhG" class="buy-btn" target="_blank">Acheter</a>
-    </div>
-</div>
 
-<div class="container" id="pulls">
-    <h2>Pull</h2>
-    <div class="item">
-        <img src="images/pull1.jpg" alt="Pull 1">
-        <a href="https://fr.aliexpress.com/item/1005010307382550.html?spm=a2g0o.productlist.main.18.dacf42G442G4qW" class="buy-btn" target="_blank">Acheter</a>
+    <!-- Bracelet 2 -->
+    <div class="produit">
+      <a href="https://fr.aliexpress.com/item/1005009676852764.html">
+        <img src="images/bracelet2.jpg" alt="Bracelet girly 2" />
+      </a>
+      <h3>Bracelet 2</h3>
+      <p>Accessoire tendance pour votre style girly 💗</p>
     </div>
-</div>
 
-<div class="container" id="sacs">
-    <h2>Sacs</h2>
-    <div class="item">
-        <img src="images/sac1.jpg" alt="Sac 1">
-        <a href="https://fr.aliexpress.com/item/1005010675497010.html?spm=a2g0o.productlist.main.40.7f98nyhinyhiS6" class="buy-btn" target="_blank">Acheter</a>
+    <!-- Coque 1 -->
+    <div class="produit">
+      <a href="https://fr.aliexpress.com/item/1005009995731661.html">
+        <img src="images/coque1.jpg" alt="Coque iPhone rose ventouses" />
+      </a>
+      <h3>Coque 1</h3>
+      <p>Coque iPhone rose avec ventouses pour un style girly 💖</p>
     </div>
-    <div class="item">
-        <img src="images/sac2.jpg" alt="Sac 2">
-        <a href="https://fr.aliexpress.com/item/1005009708176265.html?gps-id=pcDetailBottomMoreOtherSeller" class="buy-btn" target="_blank">Acheter</a>
-    </div>
-    <div class="item">
-        <img src="images/sac3.jpg" alt="Sac 3">
-        <a href="https://fr.aliexpress.com/item/1005010425463330.html?spm=a2g0o.detail.pcDetailBottomMoreOtherSeller.15.46b0cx3zcx3zvb" class="buy-btn" target="_blank">Acheter</a>
-    </div>
-</div>
 
-<div class="container" id="voiles">
-    <h2>Voiles</h2>
-    <div class="item">
-        <img src="images/voile1.jpg" alt="Voile 1">
-        <a href="https://www.aliexpress.com/ssr/300000512/BundleDeals2?spm=a2g0o.productlist.main.5.743a4ed6cdJ0x2&productIds=1005004217644400:12000035639307000" class="buy-btn" target="_blank">Acheter</a>
+    <!-- Coque 2 -->
+    <div class="produit">
+      <a href="https://fr.aliexpress.com/item/1005010096975013.html">
+        <img src="images/coque2.jpg" alt="Coque iPhone transparente" />
+      </a>
+      <h3>Coque 2</h3>
+      <p>Coque pratique et stylée pour iPhone ✨</p>
     </div>
-</div>
 
+    <!-- Montage Coques + accessoires -->
+    <div class="produit">
+      <a href="https://kawther-bmdhk-ops.github.io/Mon-mini-site/">
+        <img src="images/coque-accessoires.jpg" alt="Montage coques et accessoires girly" />
+      </a>
+      <h3>Coques & accessoires girly</h3>
+      <p>Une sélection colorée de coques et accessoires pour téléphone, parfait pour un style girly 💗</p>
+    </div>
+
+    <!-- Foulard 1 -->
+    <div class="produit">
+      <a href="https://fr.aliexpress.com/item/1005008737264509.html">
+        <img src="images/foulard1.jpg" alt="Foulard girly 1" />
+      </a>
+      <h3>Foulard 1</h3>
+      <p>Foulard coloré pour accessoiriser votre style 💖</p>
+    </div>
+
+    <!-- Foulard 2 -->
+    <div class="produit">
+      <a href="https://fr.aliexpress.com/item/1005006974079958.html">
+        <img src="images/foulard2.jpg" alt="Foulard girly 2" />
+      </a>
+      <h3>Foulard 2</h3>
+      <p>Foulard tendance pour un look girly parfait ✨</p>
+    </div>
+
+    <!-- Pull -->
+    <div class="produit">
+      <a href="https://fr.aliexpress.com/item/1005010307382550.html">
+        <img src="images/pull1.jpg" alt="Pull girly" />
+      </a>
+      <h3>Pull 1</h3>
+      <p>Pull confortable et stylé pour un look girly 💗</p>
+    </div>
+
+    <!-- Sac 1 -->
+    <div class="produit">
+      <a href="https://fr.aliexpress.com/item/1005010675497010.html">
+        <img src="images/sac1.jpg" alt="Sac girly 1" />
+      </a>
+      <h3>Sac 1</h3>
+      <p>Sac pratique et girly pour tous les jours ✨</p>
+    </div>
+
+    <!-- Sac 2 -->
+    <div class="produit">
+      <a href="https://fr.aliexpress.com/item/1005009708176265.html">
+        <img src="images/sac2.jpg" alt="Sac girly 2" />
+      </a>
+      <h3>Sac 2</h3>
+      <p>Sac coloré et tendance 💖</p>
+    </div>
+
+    <!-- Sac 3 -->
+    <div class="produit">
+      <a href="https://fr.aliexpress.com/item/1005010425463330.html">
+        <img src="images/sac3.jpg" alt="Sac girly 3" />
+      </a>
+      <h3>Sac 3</h3>
+      <p>Sac stylé et pratique pour compléter ton look ✨</p>
+    </div>
+
+    <!-- Voile -->
+    <div class="produit">
+      <a href="https://www.aliexpress.com/ssr/300000512/BundleDeals2?productIds=1005004217644400:12000035639307000">
+        <img src="images/voile1.jpg" alt="Voile girly" />
+      </a>
+      <h3>Voile 1</h3>
+      <p>Voile léger et coloré pour un style parfait 💖</p>
+    </div>
+
+  </div>
 </body>
 </html>
