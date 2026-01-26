@@ -3,203 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studio Jasmin - Accessoires & Coques Girly</title>
-  <style>
-    body {
-      font-family: 'Dancing Script', cursive; /* police girly */
-      background: repeating-linear-gradient(45deg, #c8facc, #c8facc 20px, #ffffff 20px, #ffffff 40px); /* rayures vertes et blanches */
-      color: #ff69b4; /* rose flashy */
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 30px;
-    }
-
-    .produit {
-      background: #ffffff;
-      border: 2px solid #ff69b4;
-      border-radius: 15px;
-      width: 250px;
-      text-align: center;
-      padding: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-
-    .produit:hover {
-      transform: scale(1.05);
-    }
-
-    .produit img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .produit h3 {
-      margin: 10px 0 5px;
-      font-size: 1.1rem;
-    }
-
-    .produit p {
-      font-size: 0.9rem;
-      color: #ff1493; /* rose pétant */
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-  </style>
+  <title>Studio Jasmin</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1 style="text-align:center; padding:20px;">Studio Jasmin 💗</h1>
+    <h1>Studio Jasmin</h1>
+    <nav>
+      <ul>
+        <li><a href="#foulards">Foulards</a></li>
+        <li><a href="#accessoires">Accessoires</a></li>
+        <li><a href="#inspiration">Inspiration</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <div class="container">
-    <!-- Bijou 1 -->
-    <div class="produit">
-      <a href="https://fr.aliexpress.com/item/1005009913120132.html">
-        <img src="images/bijou1.jpg" alt="Bijou girly 1" />
+  <!-- Section Foulards -->
+  <section id="foulards">
+    <h2>Foulards</h2>
+    <article class="item">
+      <img src="images/foulard1.jpg" alt="Foulard beige doux">
+      <h3>Foulard Beige</h3>
+      <p>Un foulard élégant et doux pour vos tenues quotidiennes.</p>
+    </article>
+    <article class="item">
+      <img src="images/foulard2.jpg" alt="Foulard rose pastel">
+      <h3>Foulard Rose</h3>
+      <p>Une touche de couleur pour illuminer vos looks.</p>
+    </article>
+
+    <!-- PUB DIAMOND SMILE TEETH -->
+    <article class="item">
+      <a href="https://tidd.ly/4qhSAYh" target="_blank">
+        <img src="images/diamond_smile_montage.jpg" alt="Diamond Smile Teeth - Lingettes blanchissantes">
+        <h3>Diamond Smile Teeth X Studio Jasmin</h3>
       </a>
-      <h3>Bijou 1</h3>
-      <p>Petit bijou tendance pour un look girly parfait 💖</p>
-    </div>
+      <p>Découvrez les lingettes blanchissantes Diamond Smile Teeth pour un sourire éclatant ✨</p>
+    </article>
+  </section>
 
-    <!-- Bracelet 1 -->
-    <div class="produit">
-      <a href="https://fr.aliexpress.com/item/1005009936139322.html">
-        <img src="images/bracelet1.jpg" alt="Bracelet girly 1" />
-      </a>
-      <h3>Bracelet 1</h3>
-      <p>Bracelet girly coloré et chic ✨</p>
-    </div>
+  <!-- Section Accessoires -->
+  <section id="accessoires">
+    <h2>Accessoires</h2>
+    <article class="item">
+      <img src="images/sac1.jpg" alt="Petit sac marron">
+      <h3>Petit Sac Marron</h3>
+      <p>Un petit sac chic pour compléter vos looks quotidiens.</p>
+    </article>
+  </section>
 
-    <!-- Bracelet 2 -->
-    <div class="produit">
-      <a href="https://fr.aliexpress.com/item/1005009676852764.html">
-        <img src="images/bracelet2.jpg" alt="Bracelet girly 2" />
-      </a>
-      <h3>Bracelet 2</h3>
-      <p>Accessoire tendance pour votre style girly 💗</p>
-    </div>
+  <!-- Section Inspiration -->
+  <section id="inspiration">
+    <h2>Inspiration</h2>
+    <article class="item">
+      <img src="images/moodboard1.jpg" alt="Moodboard soft girl pastel rose et marron">
+      <h3>Moodboard Soft Girl</h3>
+      <p>Palette de couleurs douces pour créer votre style quotidien 💖🤎</p>
+    </article>
+  </section>
 
-    <!-- Coque 1 -->
-    <div class="produit">
-      <a href="https://fr.aliexpress.com/item/1005009995731661.html">
-        <img src="images/coque1.jpg" alt="Coque iPhone rose ventouses" />
-      </a>
-      <h3>Coque 1</h3>
-      <p>Coque iPhone rose avec ventouses pour un style girly 💖</p>
-    </div>
-
-    <!-- Coque 2 -->
-    <div class="produit">
-      <a href="https://fr.aliexpress.com/item/1005010096975013.html">
-        <img src="images/coque2.jpg" alt="Coque iPhone transparente" />
-      </a>
-      <h3>Coque 2</h3>
-      <p>Coque pratique et stylée pour iPhone ✨</p>
-    </div>
-
-    <!-- Montage Coques + accessoires -->
-    <div class="produit">
-      <a href="https://kawther-bmdhk-ops.github.io/Mon-mini-site/">
-        <img src="images/coque-accessoires.jpg" alt="Montage coques et accessoires girly" />
-      </a>
-      <h3>Coques & accessoires girly</h3>
-      <p>Une sélection colorée de coques et accessoires pour téléphone, parfait pour un style girly 💗</p>
-    </div>
-
-    <!-- Foulard 1 -->
-    <div class="produit">
-      <a href="https://fr.aliexpress.com/item/1005008737264509.html">
-        <img src="images/foulard1.jpg" alt="Foulard girly 1" />
-      </a>
-      <h3>Foulard 1</h3>
-      <p>Foulard coloré pour accessoiriser votre style 💖</p>
-    </div>
-
-    <!-- Foulard 2 -->
-    <div class="produit">
-      <a href="https://fr.aliexpress.com/item/1005006974079958.html">
-        <img src="images/foulard2.jpg" alt="Foulard girly 2" />
-      </a>
-      <h3>Foulard 2</h3>
-      <p>Foulard tendance pour un look girly parfait ✨</p>
-    </div>
-
-    <!-- Module Diamond Smile Teeth sous les foulards -->
-<section style="padding:30px; text-align:center; font-family:Arial, sans-serif; background:linear-gradient(to right, #ffe6f0 50%, #ffffff 50%);">
-  <!-- Titre -->
-  <h2 style="color:#e60000; margin-bottom:20px;">Diamond Smile Teeth × Studio Jasmin</h2>
-
-  <!-- Montage unique avec les 3 lingettes -->
-  <div style="max-width:800px; margin:0 auto;">
-    <img src="images/diamond-smile.jpg" alt="Montage des 3 lingettes Diamond Smile Teeth" style="width:100%; height:auto; border-radius:10px;">
-  </div>
-
-  <!-- Bouton affilié -->
-  <div style="margin-top:15px;">
-    <a href="https://tidd.ly/4qhSAYh" target="_blank" style="display:inline-block; padding:12px 20px; background-color:#e60000; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;">Découvrir Diamond Smile</a>
-  </div>
-</section>
-
-    <!-- Pull -->
-    <div class="produit">
-      <a href="https://fr.aliexpress.com/item/1005010307382550.html">
-        <img src="images/pull1.jpg" alt="Pull girly" />
-      </a>
-      <h3>Pull 1</h3>
-      <p>Pull confortable et stylé pour un look girly 💗</p>
-    </div>
-
-    <!-- Sac 1 -->
-    <div class="produit">
-      <a href="https://fr.aliexpress.com/item/1005010675497010.html">
-        <img src="images/sac1.jpg" alt="Sac girly 1" />
-      </a>
-      <h3>Sac 1</h3>
-      <p>Sac pratique et girly pour tous les jours ✨</p>
-    </div>
-
-    <!-- Sac 2 -->
-    <div class="produit">
-      <a href="https://fr.aliexpress.com/item/1005009708176265.html">
-        <img src="images/sac2.jpg" alt="Sac girly 2" />
-      </a>
-      <h3>Sac 2</h3>
-      <p>Sac coloré et tendance 💖</p>
-    </div>
-
-    <!-- Sac 3 -->
-    <div class="produit">
-      <a href="https://fr.aliexpress.com/item/1005010425463330.html">
-        <img src="images/sac3.jpg" alt="Sac girly 3" />
-      </a>
-      <h3>Sac 3</h3>
-      <p>Sac stylé et pratique pour compléter ton look ✨</p>
-    </div>
-
-    <!-- Voile -->
-    <div class="produit">
-      <a href="https://www.aliexpress.com/ssr/300000512/BundleDeals2?productIds=1005004217644400:12000035639307000">
-        <img src="images/voile1.jpg" alt="Voile girly" />
-      </a>
-      <h3>Voile 1</h3>
-      <p>Voile léger et coloré pour un style parfait 💖</p>
-    </div>
-
-  </div>
-<body>
-    </div>
-
-  </div>
-</section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Studio Jasmin. Tous droits réservés.</p>
+  </footer>
+</body>
 </html>
