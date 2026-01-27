@@ -1,269 +1,282 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studio Jasmin</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-  <style>
-    /* FOND ET STRUCTURE */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: repeating-linear-gradient(
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jasmin Shop</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --rose-fuchsia:#ff2b8a;
+    --rose-clair:#ffd1e8;
+    --vert-matcha:#9ccf6d;
+    --text:#1f1f1f;
+    --border:#f4d6e2;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Poppins',sans-serif;
+    color:var(--text);
+    background:
+      repeating-linear-gradient(
         45deg,
-        #4ade80, /* vert pétant */
-        #4ade80 30px,
-        #ffffff 30px, /* blanc */
-        #ffffff 60px
+        #ffffff 0px,
+        #ffffff 30px,
+        var(--vert-matcha) 30px,
+        var(--vert-matcha) 60px
       );
-      color: #000;
-    }
+    background-size: 100% 100%;
+  }
 
-    a { text-decoration: none; color: inherit; }
+  header{
+    padding:18px 18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    position:sticky;
+    top:0;
+    z-index:10;
+    border-bottom:1px solid var(--border);
+  }
 
-    header {
-      background: rgba(255, 255, 255, 0.2); /* léger fond transparent pour lisibilité */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+  .logo{
+    font-family:'Dancing Script', cursive;
+    font-size:34px;
+    font-weight:700;
+    color:var(--rose-fuchsia);
+  }
 
-    header h1 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.5em;
-      color: #f43f5e;
-      margin: 0;
-    }
+  nav a{
+    margin-left:16px;
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    font-size:14px;
+  }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
+  .btn{
+    padding:10px 14px;
+    border:2px solid var(--rose-fuchsia);
+    background:transparent;
+    border-radius:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+    text-decoration:none;
+    color:#333;
+  }
+  .btn:hover{
+    background:var(--rose-fuchsia);
+    color:#fff;
+  }
 
-    nav ul li a {
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.2em;
-      color: #f43f5e;
-      transition: transform 0.2s;
-    }
+  .hero{
+    padding:90px 18px 50px;
+    text-align:center;
+    background: linear-gradient(135deg, rgba(255,43,138,0.35), rgba(156,207,109,0.25));
+    border-bottom:1px solid var(--border);
+    color:#fff;
+  }
+  .hero h1{
+    font-family:'Dancing Script', cursive;
+    font-size:60px;
+    margin-bottom:12px;
+    color:var(--rose-fuchsia);
+  }
+  .hero p{
+    font-size:18px;
+    margin-bottom:20px;
+    max-width:720px;
+    margin-left:auto;
+    margin-right:auto;
+    color:#333;
+  }
 
-    nav ul li a:hover {
-      transform: scale(1.1);
-    }
+  .cta{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+  }
 
-    section {
-      padding: 50px 20px;
-    }
+  .btn-primary{
+    background:var(--rose-fuchsia);
+    color:#fff;
+    border-color:var(--rose-fuchsia);
+  }
+  .btn-primary:hover{
+    background:#fff;
+    color:var(--rose-fuchsia);
+    border-color:var(--rose-fuchsia);
+  }
 
-    h2 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.5em;
-      color: #f43f5e;
-      text-align: center;
-      margin-bottom: 30px;
-    }
+  .section{
+    padding:40px 18px;
+  }
+  .section h2{
+    font-family:'Dancing Script', cursive;
+    font-size:34px;
+    margin-bottom:18px;
+    color:var(--rose-fuchsia);
+  }
 
-    h3 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.5em;
-      color: #f43f5e;
-      margin: 10px 0 5px;
-    }
+  .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
 
-    .item {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+  .card{
+    background:rgba(255,255,255,0.85);
+    border:2px solid var(--border);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  }
 
-    .item img {
-      max-width: 250px;
-      border-radius: 15px;
-      transition: transform 0.3s;
-    }
+  .card-body{
+    padding:18px;
+  }
+  .card-title{
+    font-family:'Dancing Script', cursive;
+    font-size:24px;
+    margin-bottom:8px;
+    color:var(--rose-fuchsia);
+  }
+  .card-text{
+    font-size:14px;
+    color:#666;
+    margin-bottom:12px;
+  }
+  .card .btn{
+    border-radius:16px;
+  }
 
-    .item img:hover {
-      transform: scale(1.05);
-    }
+  .products{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
 
-    .item a button {
-      background-color: #f43f5e;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 20px;
-      color: #fff;
-      font-family: 'Dancing Script', cursive;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+  .product-card{
+    background:rgba(255,255,255,0.9);
+    border:2px solid var(--border);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+    text-align:center;
+  }
+  .product-card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+  }
+  .product-card h3{
+    font-family:'Dancing Script', cursive;
+    font-size:24px;
+    margin:14px 0 8px;
+    color:var(--rose-fuchsia);
+  }
+  .product-card .price{
+    font-size:18px;
+    color:#444;
+    margin-bottom:12px;
+  }
+  .product-card .btn{
+    margin-bottom:18px;
+  }
 
-    .item a button:hover {
-      background-color: #e11d48;
-    }
+  footer{
+    padding:25px 18px;
+    background:rgba(255,255,255,0.85);
+    border-top:1px solid var(--border);
+    text-align:center;
+  }
+  footer p{
+    color:#777;
+    font-size:14px;
+  }
 
-    /* Nos sélections style fin */
-    .nos-selections {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.8em;
-      color: #f43f5e;
-      text-align: center;
-      margin: 60px 0 40px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      font-family: Arial, sans-serif;
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    footer a {
-      color: #f43f5e;
-      font-family: 'Dancing Script', cursive;
-    }
-  </style>
+  @media(max-width:900px){
+    .grid{grid-template-columns:1fr;}
+    .products{grid-template-columns:1fr;}
+    .hero h1{font-size:46px;}
+  }
+</style>
 </head>
 <body>
 
 <header>
-  <h1>Studio Jasmin</h1>
+  <div class="logo">Jasmin Shop</div>
   <nav>
-    <ul>
-      <li><a href="#hijab">Hijab</a></li>
-      <li><a href="#diamond">Diamond Smile</a></li>
-      <li><a href="#vetements">Vêtements</a></li>
-      <li><a href="#bottes">Bottes</a></li>
-      <li><a href="#accessoires">Accessoires</a></li>
-      <li><a href="#coques">Coques</a></li>
-      <li><a href="#bijoux">Bijoux</a></li>
-      <li><a href="#sac">Sac à main</a></li>
-    </ul>
+    <a href="#shop">Boutique</a>
+    <a href="#access">Accessoires</a>
+    <a href="#contact">Contact</a>
   </nav>
+  <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005009995731661.html" target="_blank">Voir la coque</a>
 </header>
 
-<!-- Nos Sélections -->
-<div class="nos-selections">Nos Sélections</div>
-
-<!-- Section Hijab -->
-<section id="hijab">
-  <h2>Hijab</h2>
-  <div class="item">
-    <a href="https://fr.aliexpress.com/item/1005010328186036.html" target="_blank">
-      <img src="URL_IMAGE_ICI" alt="Voile avec attache gris">
-      <h3>Voile avec attache - Gris 5 étoiles</h3>
-    </a>
-  </div>
-  <div class="item">
-    <a href="https://fr.aliexpress.com/item/1005007250703766.html" target="_blank">
-      <img src="URL_IMAGE_ICI" alt="Voile avec attache noir">
-      <h3>Voile avec attache Noir</h3>
-    </a>
+<section class="hero">
+  <h1>Beauté & style en mode girly</h1>
+  <p>Coques, accessoires et petites trouvailles girly 💗</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005009995731661.html" target="_blank">Acheter la coque</a>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005008737264509.html" target="_blank">Voir le foulard</a>
   </div>
 </section>
 
-<!-- Section Diamond Smile -->
-<section id="diamond">
-  <h2>Diamond Smile Teeth</h2>
-  <div class="item">
-    <a href="https://tidd.ly/4qHhm4R" target="_blank">
-      <img src="URL_IMAGE_ICI" alt="Diamond Smile Teeth">
-      <h3>Diamond Smile Teeth X Studio Jasmin</h3>
-    </a>
-    <p>Lingettes blanchissantes pour un sourire éclatant ✨</p>
+<section class="section" id="shop">
+  <h2>Nos sélections</h2>
+  <div class="products">
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/HTB1Y5Z0b4naK1RjSZFtq6yYdVXat.jpg" alt="Coque ventouse rose">
+      <h3>Phone Case with Suction Cups</h3>
+      <p class="price">€0.99</p>
+      <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005009995731661.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Scarf Accessory">
+      <h3>Scarf Accessory</h3>
+      <p class="price">€7.93</p>
+      <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005008737264509.html" target="_blank">Acheter</a>
+    </div>
   </div>
 </section>
 
-<!-- Section Vêtements -->
-<section id="vetements">
-  <h2>Vêtements</h2>
-  <div class="item">
-    <a href="https://fr.aliexpress.com/item/1005010307382550.html" target="_blank">
-      <img src="URL_IMAGE_ICI" alt="Pull à zip vert intérieur jaune">
-      <h3>Pull à zip vert intérieur jaune</h3>
-    </a>
-  </div>
-</section>
-
-<!-- Section Bottes -->
-<section id="bottes">
-  <h2>Bottes</h2>
-  <div class="item">
-    <a href="https://fr.aliexpress.com/item/1005010643455708.html" target="_blank">
-      <img src="URL_IMAGE_ICI" alt="Bottes imperméable">
-      <h3>Bottes imperméables tendance</h3>
-    </a>
-  </div>
-</section>
-
-<!-- Section Accessoires -->
-<section id="accessoires">
+<section class="section" id="access">
   <h2>Accessoires</h2>
-  <div class="item">
-    <a href="https://fr.aliexpress.com/item/1005009913120132.html" target="_blank">
-      <img src="URL_IMAGE_ICI" alt="Porte clé Étoile en mousse">
-      <h3>Porte clé Étoile en mousse</h3>
-    </a>
+  <div class="grid">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Bijoux & détails</div>
+        <div class="card-text">Petits accessoires pour un style girly parfait</div>
+        <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005009995731661.html" target="_blank">Voir</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Coques & gadgets</div>
+        <div class="card-text">Coques stylées, pratiques et tendances</div>
+        <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2F/item%2F1005008737264509.html" target="_blank">Voir</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Section Coques -->
-<section id="coques">
-  <h2>Coques & gadgets</h2>
-  <div class="item">
-    <a href="https://fr.aliexpress.com/item/1005010096975013.html" target="_blank">
-      <img src="URL_IMAGE_ICI" alt="Coque ventouse blanche">
-      <h3>Coque ventouse blanche</h3>
-    </a>
-  </div>
-  <div class="item">
-    <a href="https://fr.aliexpress.com/item/1005006974079958.html" target="_blank">
-      <img src="URL_IMAGE_ICI" alt="Foulard rose et bleu">
-      <h3>Foulard rose et bleu</h3>
-    </a>
-  </div>
-</section>
-
-<!-- Section Bijoux -->
-<section id="bijoux">
-  <h2>Bijoux</h2>
-  <!-- Ajouter les bijoux ici -->
-</section>
-
-<!-- Section Sac à main -->
-<section id="sac">
-  <h2>Sac à main</h2>
-  <div class="item">
-    <a href="https://fr.aliexpress.com/item/1005010675497010.html" target="_blank">
-      <img src="URL_IMAGE_ICI" alt="Saclala">
-      <h3>Saclala</h3>
-    </a>
-  </div>
-  <div class="item">
-    <a href="https://fr.aliexpress.com/item/1005009708176265.html" target="_blank">
-      <img src="URL_IMAGE_ICI" alt="Sac jaune">
-      <h3>Sac  jaune</h3>
-    </a>
-  </div>
-  <div class="item">
-    <a href="https://fr.aliexpress.com/item/1005010425463330.html" target="_blank">
-      <img src="URL_IMAGE_ICI" alt="Sac  marron nubuc">
-      <h3>Sac  marron nubuc</h3>
-    </a>
-  </div>
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email : kawther-bmdhk@hotmail.com</p>
+  <p>Pinterest : <a href="https://pin.it/S8umJ0eeK" target="_blank">Jasmin Shop</a></p>
 </section>
 
 <footer>
-  <p>Email : kawther-bmdhk@hotmail.com</p>
-  <p>Pinterest : <a href="https://www.pinterest.com/studiojasmin" target="_blank">Studio Jasmin</a></p>
-  <p>© 2026 Studio Jasmin • Boutique & Beauté</p>
+  <p>© 2026 Jasmin Shop • Boutique & Beauté</p>
 </footer>
 
 </body>
