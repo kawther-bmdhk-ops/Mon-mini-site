@@ -4,113 +4,187 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio Jasmin</title>
-  <!-- Police Dancing Script pour header -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Dancing Script', cursive;
+      background: repeating-linear-gradient(
+        45deg,
+        #a8d5ba,
+        #a8d5ba 20px,
+        #ffffff 20px,
+        #ffffff 40px
+      );
+      color: #d63b7f;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f5f5f5;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #4caf50;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      color: #d63b7f;
+      margin-bottom: 15px;
+    }
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .item {
+      border: 2px solid #4caf50;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: #ffffff;
+      width: 220px;
+      text-align: center;
+    }
+    .item img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4caf50;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Studio Jasmin</h1>
-    <nav>
-      <ul>
-        <li><a href="#beaute">Beauté</a></li>
-        <li><a href="#accessoires">Accessoires</a></li>
-        <li><a href="#vetements">Vêtements</a></li>
-        <li><a href="#bijoux">Bijoux</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Section Beauté -->
-  <section id="beaute">
-    <h2>Beauté</h2>
-    <div class="grid">
-      <article class="item">
-        <img src="images/soin1.jpg" alt="Crème hydratante">
-        <h3>Crème Hydratante</h3>
-        <p>Hydrate et illumine votre peau quotidiennement.</p>
-        <button>Voir plus</button>
-      </article>
-      <article class="item">
-        <img src="images/soin2.jpg" alt="Masque visage">
-        <h3>Masque Visage</h3>
-        <p>Pour un teint éclatant et revitalisé.</p>
-        <button>Voir plus</button>
-      </article>
+<header>
+  <h1>Studio Jasmin</h1>
+  <nav>
+    <ul>
+      <li><a href="#hijab">Hijab</a></li>
+      <li><a href="#diamond">Diamond</a></li>
+      <li><a href="#vetements">Vêtements</a></li>
+      <li><a href="#accessoires">Accessoires</a></li>
+      <li><a href="#bijoux">Bijoux</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hijab -->
+<section id="hijab">
+  <h2>Hijab</h2>
+  <div class="items">
+    <div class="item">
+      <img src="https://fr.aliexpress.com/item/1005007250703766.html" alt="Voile noir">
+      <h3>Voile Noir</h3>
+      <p>Voile élégant et confortable pour toutes occasions.</p>
+      <a href="https://fr.aliexpress.com/item/1005007250703766.html" target="_blank"><button>Voir plus</button></a>
     </div>
-  </section>
-
-  <!-- Section Accessoires -->
-  <section id="accessoires">
-    <h2>Accessoires</h2>
-    <div class="grid">
-      <article class="item">
-        <img src="images/sac1.jpg" alt="Petit sac marron">
-        <h3>Petit Sac Marron</h3>
-        <p>Un petit sac chic pour compléter vos looks quotidiens.</p>
-        <button>Voir plus</button>
-      </article>
-      <article class="item">
-        <img src="images/foulard1.jpg" alt="Foulard beige doux">
-        <h3>Foulard Beige</h3>
-        <p>Élégance et douceur pour vos tenues quotidiennes.</p>
-        <button>Voir plus</button>
-      </article>
-
-      <!-- PUB DIAMOND SMILE TEETH -->
-      <article class="item">
-        <a href="https://tidd.ly/4qhSAYh" target="_blank">
-          <img src="images/diamond_smile_montage.jpg" alt="Diamond Smile Teeth - Lingettes blanchissantes">
-          <h3>Diamond Smile Teeth X Studio Jasmin</h3>
-        </a>
-        <p>Lingettes blanchissantes pour un sourire éclatant ✨</p>
-        <button>Acheter maintenant</button>
-      </article>
+    <div class="item">
+      <img src="https://fr.aliexpress.com/item/1005007250703766.html" alt="Voile marron">
+      <h3>Voile Marron</h3>
+      <p>Voile doux assorti à toutes vos tenues.</p>
+      <a href="https://fr.aliexpress.com/item/1005007250703766.html" target="_blank"><button>Voir plus</button></a>
     </div>
-  </section>
-
-  <!-- Section Vêtements -->
-  <section id="vetements">
-    <h2>Vêtements</h2>
-    <div class="grid">
-      <article class="item">
-        <img src="images/robe1.jpg" alt="Robe rose">
-        <h3>Robe Rose</h3>
-        <p>Parfaite pour un look soft girl élégant.</p>
-        <button>Voir plus</button>
-      </article>
-      <article class="item">
-        <img src="images/top1.jpg" alt="Top blanc">
-        <h3>Top Blanc</h3>
-        <p>Simple et chic pour toutes vos tenues.</p>
-        <button>Voir plus</button>
-      </article>
+    <div class="item">
+      <img src="https://fr.aliexpress.com/item/1005010328186036.html" alt="Voile gris">
+      <h3>Voile Gris</h3>
+      <p>Voile avec attache, 5 étoiles sur AliExpress.</p>
+      <a href="https://fr.aliexpress.com/item/1005010328186036.html" target="_blank"><button>Voir plus</button></a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Section Bijoux -->
-  <section id="bijoux">
-    <h2>Bijoux</h2>
-    <div class="grid">
-      <article class="item">
-        <img src="images/collier1.jpg" alt="Collier doré">
-        <h3>Collier Doré</h3>
-        <p>Un bijou délicat pour sublimer votre style.</p>
-        <button>Voir plus</button>
-      </article>
-      <article class="item">
-        <img src="images/bague1.jpg" alt="Bague argent">
-        <h3>Bague Argent</h3>
-        <p>Élégante et raffinée, parfaite pour toutes occasions.</p>
-        <button>Voir plus</button>
-      </article>
+<!-- Diamond -->
+<section id="diamond">
+  <h2>Diamond Smile</h2>
+  <div class="items">
+    <div class="item">
+      <img src="https://tidd.ly/4qHhm4R" alt="Diamond Smile Teeth">
+      <h3>Diamond Smile Teeth</h3>
+      <p>Lingettes blanchissantes pour un sourire éclatant ✨</p>
+      <a href="https://tidd.ly/4qHhm4R" target="_blank"><button>Voir plus</button></a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Studio Jasmin. Tous droits réservés.</p>
-  </footer>
+<!-- Vêtements -->
+<section id="vetements">
+  <h2>Vêtements</h2>
+  <div class="items">
+    <div class="item">
+      <img src="https://fr.aliexpress.com/item/1005010328186036.html" alt="Ensemble jogging noir">
+      <h3>Ensemble Jogging Noir</h3>
+      <p>Imitation Zara, confortable et stylé.</p>
+      <a href="https://fr.aliexpress.com/item/1005010328186036.html" target="_blank"><button>Voir plus</button></a>
+    </div>
+    <div class="item">
+      <img src="https://fr.aliexpress.com/item/1005009919784601.html" alt="Veste cuir bombardier">
+      <h3>Veste Cuir Bombardier</h3>
+      <p>Veste chic en cuir pour vos sorties.</p>
+      <a href="https://fr.aliexpress.com/item/1005009919784601.html" target="_blank"><button>Voir plus</button></a>
+    </div>
+    <div class="item">
+      <img src="https://fr.aliexpress.com/item/1005009011652372.html" alt="Veste fermeture éclair femme">
+      <h3>Veste Zippée Femme</h3>
+      <p>Veste pratique et tendance pour le quotidien.</p>
+      <a href="https://fr.aliexpress.com/item/1005009011652372.html" target="_blank"><button>Voir plus</button></a>
+    </div>
+    <!-- Ajoute les autres vêtements ici de la même façon -->
+  </div>
+</section>
+
+<!-- Accessoires -->
+<section id="accessoires">
+  <h2>Accessoires</h2>
+  <div class="items">
+    <div class="item">
+      <img src="https://fr.aliexpress.com/item/1005010351488064.html" alt="Gloss hydratant">
+      <h3>Gloss Hydratant</h3>
+      <p>Pour des lèvres douces et brillantes.</p>
+      <a href="https://fr.aliexpress.com/item/1005010351488064.html" target="_blank"><button>Voir plus</button></a>
+    </div>
+    <!-- Ajoute les autres accessoires ici -->
+  </div>
+</section>
+
+<!-- Bijoux -->
+<section id="bijoux">
+  <h2>Bijoux</h2>
+  <div class="items">
+    <!-- Ajoute ici tes bijoux -->
+    <div class="item">
+      <img src="images/placeholder.jpg" alt="Bijoux placeholder">
+      <h3>Boucles d'oreilles</h3>
+      <p>À remplacer par vos photos AliExpress ou vos propres bijoux.</p>
+      <button>Voir plus</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Studio Jasmin. Tous droits réservés.</p>
+</footer>
+
 </body>
 </html>
