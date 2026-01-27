@@ -1,151 +1,228 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jasmin Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Arial&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose-fuchsia:#ff2b8a;
+  --vert-matcha:#9ccf6d;
+  --text:#1f1f1f;
+  --border:#f4d6e2;
 }
-
-/* Fond rayé vert matcha et blanc */
-body {
-  font-family: 'Arial', sans-serif;
-  background: repeating-linear-gradient(
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Arial',sans-serif;
+  color:var(--text);
+  background:repeating-linear-gradient(
     45deg,
-    #a3cfa5 0,
-    #a3cfa5 50px,
-    #ffffff 50px,
-    #ffffff 100px
+    #ffffff 0px,
+    #ffffff 30px,
+    var(--vert-matcha) 30px,
+    var(--vert-matcha) 60px
   );
-  color: #333;
-  padding: 0 20px;
-  line-height: 1.5;
 }
+header{
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.8);
+  backdrop-filter: blur(8px);
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom:1px solid var(--border);
+}
+.logo{
+  font-family:'Dancing Script', cursive;
+  font-size:34px;
+  font-weight:700;
+  color:var(--rose-fuchsia);
+}
+nav a{
+  margin-left:16px;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+  font-size:14px;
+}
+.btn{
+  padding:10px 14px;
+  border:2px solid var(--rose-fuchsia);
+  background:transparent;
+  border-radius:14px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+  text-decoration:none;
+  color:#333;
+}
+.btn:hover{
+  background:var(--rose-fuchsia);
+  color:#fff;
+}
+.section{
+  padding:40px 18px;
+}
+.section h2{
+  font-family:'Dancing Script', cursive;
+  font-size:34px;
+  margin-bottom:18px;
+  color:var(--rose-fuchsia);
+  text-align:center;
+}
+.products{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  justify-items:center;
+}
+.product-card{
+  background:rgba(255,255,255,0.9);
+  border:2px solid var(--border);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  text-align:center;
+  width:100%;
+  max-width:300px;
+}
+.product-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+.product-card h3{
+  font-family:'Dancing Script', cursive;
+  font-size:22px;
+  margin:14px 0 8px;
+  color:var(--rose-fuchsia);
+}
+.product-card .price{
+  font-family:'Arial', sans-serif;
+  font-size:16px;
+  color:#444;
+  margin-bottom:12px;
+}
+.product-card .btn{
+  margin-bottom:18px;
+}
+footer{
+  padding:25px 18px;
+  background:rgba(255,255,255,0.85);
+  border-top:1px solid var(--border);
+  text-align:center;
+}
+footer p{
+  color:#777;
+  font-size:14px;
+}
+@media(max-width:900px){
+  .products{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
 
-/* Header */
-header {
-  text-align: center;
-  padding: 20px 0;
-}
+<header>
+  <div class="logo">Jasmin Shop</div>
+  <nav>
+    <a href="#shop">Boutique</a>
+    <a href="#access">Accessoires</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-header h1 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 3rem;
-  color: #d36c90; /* rose framboise */
-}
+<section class="section" id="shop">
+  <h2>Nos sélections</h2>
+  <div class="products">
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
-}
+    <!-- Coque Ventouse Blanche -->
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/HTB1Y5Z0b4naK1RjSZFtq6yYdVXat.jpg" alt="Coque ventouse blanche">
+      <h3>Coque Ventouse Blanche</h3>
+      <p class="price">€0.99</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010096975013.html" target="_blank">Acheter</a>
+    </div>
 
-nav ul li a {
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 8px;
-  background: linear-gradient(45deg, #a3cfa5, #d36c90); /* vert + rose */
-  color: #fff;
-  transition: transform 0.3s ease;
-}
+    <!-- Foulard Rose et Bleu -->
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Foulard Rose et Bleu">
+      <h3>Foulard Rose & Bleu</h3>
+      <p class="price">€0.99</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005006974079958.html" target="_blank">Acheter</a>
+    </div>
 
-nav ul li a:hover {
-  transform: scale(1.05);
-}
+    <!-- Porte clé Étoile -->
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Porte clé étoile">
+      <h3>Porte Clé Étoile en mousse</h3>
+      <p class="price">€0.99</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005009913120132.html" target="_blank">Acheter</a>
+    </div>
 
-/* Sections */
-section {
-  margin: 40px 0;
-}
+    <!-- Sac LV -->
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Sac LV">
+      <h3>Sac LV</h3>
+      <p class="price">€223.69</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010675497010.html" target="_blank">Acheter</a>
+    </div>
 
-section h2 {
-  font-size: 2rem;
-  text-align: center;
-  color: #d36c90;
-  margin-bottom: 20px;
-}
+    <!-- Sac Loro Jaune -->
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Sac Loro Jaune">
+      <h3>Sac Loro Jaune</h3>
+      <p class="price">€54.99</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005009708176265.html" target="_blank">Acheter</a>
+    </div>
 
-/* Grille d’articles */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
+    <!-- Sac Loro Marron Nubuc -->
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Sac Loro Marron Nubuc">
+      <h3>Sac Loro Marron Nubuc</h3>
+      <p class="price">€35.19</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010425463330.html" target="_blank">Acheter</a>
+    </div>
 
-/* Articles */
-.item {
-  background: rgba(255,255,255,0.85);
-  border-radius: 12px;
-  padding: 15px;
-  text-align: center;
-  border: 1px solid #eee;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    <!-- Pull à zip vert -->
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Pull à zip vert">
+      <h3>Pull à Zip Vert Intérieur Jaune</h3>
+      <p class="price">€18.49</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010307382550.html" target="_blank">Acheter</a>
+    </div>
 
-.item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
+  </div>
+</section>
 
-.item img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
+<section class="section" id="access">
+  <h2>Accessoires</h2>
+  <div class="products">
 
-.item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
+    <!-- Bijoux & détails -->
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Bijoux & détails">
+      <h3>Bijoux & détails</h3>
+      <p class="price">-</p>
+      <a class="btn" href="#" target="_blank">Voir</a>
+    </div>
 
-.item p {
-  font-size: 1rem;
-  color: #666;
-}
+  </div>
+</section>
 
-/* Boutons */
-.item button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 8px;
-  background-color: #d36c90;
-  color: #fff;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 10px;
-  transition: background 0.3s ease;
-}
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email : kawther-bmdhk@hotmail.com</p>
+  <p>Pinterest : <a href="https://pin.it/S8umJ0eeK" target="_blank">Jasmin Shop</a></p>
+</section>
 
-.item button:hover {
-  background-color: #c1547a;
-}
+<footer>
+  <p>© 2026 Jasmin Shop • Boutique & Beauté</p>
+</footer>
 
-.item a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.item a:hover h3 {
-  color: #d36c90;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #999;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  section h2 {
-    font-size: 1.5rem;
-  }
-}
+</body>
+</html>
