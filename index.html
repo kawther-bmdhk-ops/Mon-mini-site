@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jasmin Shop</title>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Arial&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
 :root{
   --rose-fuchsia:#ff2b8a;
@@ -12,37 +14,41 @@
   --text:#1f1f1f;
   --border:#f4d6e2;
 }
+
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
-  font-family:'poppins',sans-serif;
+  font-family:'Poppins',sans-serif;
   color:var(--text);
-  background:repeating-linear-gradient(
-    45deg,
-    #ffffff 0px,
-    #ffffff 30px,
-    var(--vert-matcha) 30px,
-    var(--vert-matcha) 60px
-  );
-  background-size: 100% 100%;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #ffffff 0px,
+      #ffffff 30px,
+      var(--vert-matcha) 30px,
+      var(--vert-matcha) 60px
+    );
 }
+
 header{
   padding:18px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(255,255,255,0.8);
-  backdrop-filter: blur(8px);
+  background:rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
   position:sticky;
   top:0;
   z-index:10;
   border-bottom:1px solid var(--border);
 }
+
 .logo{
   font-family:'Dancing Script', cursive;
   font-size:34px;
   font-weight:700;
   color:var(--rose-fuchsia);
 }
+
 nav a{
   margin-left:16px;
   text-decoration:none;
@@ -50,6 +56,7 @@ nav a{
   font-weight:600;
   font-size:14px;
 }
+
 .btn{
   padding:10px 14px;
   border:2px solid var(--rose-fuchsia);
@@ -65,26 +72,62 @@ nav a{
   background:var(--rose-fuchsia);
   color:#fff;
 }
-    .hero{
-    padding:90px 18px 50px;
-    text-align:center;
-    background: linear-gradient(135deg, rgba(255,43,138,0.35), rgba(156,207,109,0.25));
-    border-bottom:1px solid var(--border);
-    color:#fff;
+
+.hero{
+  padding:90px 18px 50px;
+  text-align:center;
+  color:#fff;
+}
+.hero h1{
+  font-family:'Dancing Script', cursive;
+  font-size:60px;
+  margin-bottom:12px;
+  color:var(--rose-fuchsia);
+  animation: fadeIn 1s ease-in-out;
+}
+.hero p{
+  font-size:18px;
+  margin-bottom:20px;
+  max-width:720px;
+  margin-left:auto;
+  margin-right:auto;
+  color:#333;
+}
+
+.cta{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn-primary{
+  background:var(--rose-fuchsia);
+  color:#fff;
+  border-color:var(--rose-fuchsia);
+}
+.btn-primary:hover{
+  background:#fff;
+  color:var(--rose-fuchsia);
+  border-color:var(--rose-fuchsia);
+}
+
+.section{
+  padding:40px 18px;
 }
 .section h2{
   font-family:'Dancing Script', cursive;
   font-size:34px;
   margin-bottom:18px;
   color:var(--rose-fuchsia);
-  text-align:center;
 }
+
 .products{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:18px;
-  justify-items:center;
 }
+
 .product-card{
   background:rgba(255,255,255,0.9);
   border:2px solid var(--border);
@@ -92,29 +135,36 @@ nav a{
   overflow:hidden;
   box-shadow:0 12px 30px rgba(0,0,0,0.08);
   text-align:center;
-  width:100%;
-  max-width:300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover{
+  transform: translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.15);
 }
 .product-card img{
   width:100%;
   height:260px;
   object-fit:cover;
+  transition: transform 0.3s;
+}
+.product-card:hover img{
+  transform: scale(1.05);
 }
 .product-card h3{
   font-family:'Dancing Script', cursive;
-  font-size:22px;
+  font-size:24px;
   margin:14px 0 8px;
   color:var(--rose-fuchsia);
 }
 .product-card .price{
-  font-family:'Arial', sans-serif;
-  font-size:16px;
+  font-size:18px;
   color:#444;
   margin-bottom:12px;
 }
 .product-card .btn{
   margin-bottom:18px;
 }
+
 footer{
   padding:25px 18px;
   background:rgba(255,255,255,0.85);
@@ -125,8 +175,15 @@ footer p{
   color:#777;
   font-size:14px;
 }
+
 @media(max-width:900px){
   .products{grid-template-columns:1fr;}
+  .hero h1{font-size:46px;}
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform: translateY(-20px);}
+  to{opacity:1; transform: translateY(0);}
 }
 </style>
 </head>
@@ -141,81 +198,78 @@ footer p{
   </nav>
 </header>
 
+<section class="hero">
+  <h1>Beauté & style en mode girly</h1>
+  <p>Coques, accessoires et petites trouvailles girly 💗</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="https://fr.aliexpress.com/item/1005010096975013.html" target="_blank">Voir la coque ventouse</a>
+    <a class="btn btn-primary" href="https://fr.aliexpress.com/item/1005006974079958.html" target="_blank">Voir le foulard</a>
+  </div>
+</section>
+
 <section class="section" id="shop">
   <h2>Nos sélections</h2>
   <div class="products">
-
-    <!-- Coque Ventouse Blanche -->
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1Y5Z0b4naK1RjSZFtq6yYdVXat.jpg" alt="Coque ventouse blanche">
-      <h3>Coque Ventouse Blanche</h3>
+      <img src="https://ae01.alicdn.com/kf/HTB1Y5Z0b4naK1RjSZFtq6yYdVXat.jpg" alt="Coque ventouse rose">
+      <h3>Coque ventouse rose</h3>
       <p class="price">€0.99</p>
       <a class="btn" href="https://fr.aliexpress.com/item/1005010096975013.html" target="_blank">Acheter</a>
     </div>
 
-    <!-- Foulard Rose et Bleu -->
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Foulard Rose et Bleu">
-      <h3>Foulard Rose & Bleu</h3>
-      <p class="price">€0.99</p>
+      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Foulard rose et bleu">
+      <h3>Foulard rose et bleu</h3>
+      <p class="price">€1.14</p>
       <a class="btn" href="https://fr.aliexpress.com/item/1005006974079958.html" target="_blank">Acheter</a>
     </div>
 
-    <!-- Porte clé Étoile -->
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Porte clé étoile">
-      <h3>Porte Clé Étoile en mousse</h3>
+      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Porte clé étoile mousse">
+      <h3>Porte clé étoile mousse</h3>
       <p class="price">€0.99</p>
       <a class="btn" href="https://fr.aliexpress.com/item/1005009913120132.html" target="_blank">Acheter</a>
     </div>
 
-    <!-- Sac LV -->
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Sac LV">
-      <h3>Sac LV</h3>
+      <img src="https://ae01.alicdn.com/kf/HTB1loro1XXXXXX.jpg" alt="Sac à main Saclv">
+      <h3>Sac à main Saclv</h3>
       <p class="price">€223.69</p>
       <a class="btn" href="https://fr.aliexpress.com/item/1005010675497010.html" target="_blank">Acheter</a>
     </div>
 
-    <!-- Sac Loro Jaune -->
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Sac Loro Jaune">
-      <h3>Sac Loro Jaune</h3>
+      <img src="https://ae01.alicdn.com/kf/HTB1loro2XXXXXX.jpg" alt="Sac Loro jaune">
+      <h3>Sac Loro jaune</h3>
       <p class="price">€54.99</p>
       <a class="btn" href="https://fr.aliexpress.com/item/1005009708176265.html" target="_blank">Acheter</a>
     </div>
 
-    <!-- Sac Loro Marron Nubuc -->
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Sac Loro Marron Nubuc">
-      <h3>Sac Loro Marron Nubuc</h3>
+      <img src="https://ae01.alicdn.com/kf/HTB1loro3XXXXXX.jpg" alt="Sac Loro marron nubuc">
+      <h3>Sac Loro marron nubuc</h3>
       <p class="price">€35.19</p>
       <a class="btn" href="https://fr.aliexpress.com/item/1005010425463330.html" target="_blank">Acheter</a>
     </div>
 
-    <!-- Pull à zip vert -->
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Pull à zip vert">
-      <h3>Pull à Zip Vert Intérieur Jaune</h3>
+      <img src="https://ae01.alicdn.com/kf/HTB1pullXXXXXX.jpg" alt="Pull à zip vert intérieur jaune">
+      <h3>Pull à zip vert intérieur jaune</h3>
       <p class="price">€18.49</p>
       <a class="btn" href="https://fr.aliexpress.com/item/1005010307382550.html" target="_blank">Acheter</a>
     </div>
-
   </div>
 </section>
 
 <section class="section" id="access">
   <h2>Accessoires</h2>
   <div class="products">
-
-    <!-- Bijoux & détails -->
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Bijoux & détails">
+      <img src="https://ae01.alicdn.com/kf/HTB1BijouxXXXXXX.jpg" alt="Bijoux et détails">
       <h3>Bijoux & détails</h3>
-      <p class="price">-</p>
+      <p class="price">–</p>
       <a class="btn" href="#" target="_blank">Voir</a>
     </div>
-
   </div>
 </section>
 
