@@ -4,16 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jasmin Shop</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
   :root{
     --rose-fuchsia:#ff2b8a;
+    --rose-clair:#ffd1e8;
     --vert-matcha:#9ccf6d;
     --text:#1f1f1f;
     --border:#f4d6e2;
   }
 
-  *{margin:0;padding:0;box-sizing:border-box}
+  *{margin:0;padding:0;box-sizing:border-box; transition: all 0.3s ease;}
   body{
     font-family:'Poppins',sans-serif;
     color:var(--text);
@@ -26,10 +29,11 @@
         var(--vert-matcha) 60px
       );
     background-size: 100% 100%;
+    overflow-x: hidden;
   }
 
   header{
-    padding:18px;
+    padding:18px 18px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -63,25 +67,29 @@
     border-radius:14px;
     font-weight:700;
     cursor:pointer;
-    transition:0.3s;
     text-decoration:none;
     color:#333;
   }
   .btn:hover{
     background:var(--rose-fuchsia);
     color:#fff;
+    transform: scale(1.05);
   }
 
   .hero{
     padding:90px 18px 50px;
     text-align:center;
+    background: linear-gradient(135deg, rgba(255,43,138,0.35), rgba(156,207,109,0.25));
+    border-bottom:1px solid var(--border);
     color:#fff;
+    animation: fadeIn 1s ease forwards;
   }
   .hero h1{
     font-family:'Dancing Script', cursive;
     font-size:60px;
     margin-bottom:12px;
     color:var(--rose-fuchsia);
+    animation: slideInDown 1s ease forwards;
   }
   .hero p{
     font-size:18px;
@@ -90,6 +98,7 @@
     margin-left:auto;
     margin-right:auto;
     color:#333;
+    animation: fadeIn 1.2s ease forwards;
   }
 
   .cta{
@@ -118,6 +127,7 @@
     font-size:34px;
     margin-bottom:18px;
     color:var(--rose-fuchsia);
+    animation: fadeIn 1s ease forwards;
   }
 
   .grid{
@@ -126,12 +136,19 @@
     gap:18px;
   }
 
-  .card{
+  .card, .product-card{
     background:rgba(255,255,255,0.85);
     border:2px solid var(--border);
     border-radius:24px;
     overflow:hidden;
     box-shadow:0 12px 30px rgba(0,0,0,0.08);
+    text-align:center;
+    transition: all 0.4s ease;
+  }
+
+  .card:hover, .product-card:hover{
+    transform: translateY(-6px) scale(1.02);
+    box-shadow:0 18px 40px rgba(0,0,0,0.15);
   }
 
   .card-body{
@@ -158,14 +175,6 @@
     gap:18px;
   }
 
-  .product-card{
-    background:rgba(255,255,255,0.9);
-    border:2px solid var(--border);
-    border-radius:24px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,0.08);
-    text-align:center;
-  }
   .product-card img{
     width:100%;
     height:260px;
@@ -197,6 +206,15 @@
     font-size:14px;
   }
 
+  @keyframes fadeIn{
+    0%{opacity:0;}
+    100%{opacity:1;}
+  }
+  @keyframes slideInDown{
+    0%{opacity:0; transform: translateY(-40px);}
+    100%{opacity:1; transform: translateY(0);}
+  }
+
   @media(max-width:900px){
     .grid{grid-template-columns:1fr;}
     .products{grid-template-columns:1fr;}
@@ -213,151 +231,64 @@
     <a href="#access">Accessoires</a>
     <a href="#contact">Contact</a>
   </nav>
+  <a class="btn" href="#" target="_blank">Voir la coque</a>
 </header>
 
 <section class="hero">
   <h1>Beauté & style en mode girly</h1>
   <p>Coques, accessoires et petites trouvailles girly 💗</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="#" target="_blank">Acheter la coque</a>
+    <a class="btn" href="#" target="_blank">Voir le foulard</a>
+  </div>
 </section>
 
 <section class="section" id="shop">
   <h2>Nos sélections</h2>
   <div class="products">
-    <!-- Exemple produit -->
+    <!-- Exemple de produit, tu remplaces les liens et images -->
     <div class="product-card">
-      <img src="images/voile_attache_gris.jpg" alt="Voile avec attache gris 5 étoiles">
-      <h3>Voile avec attache - Gris 5 étoiles</h3>
-      <p class="price">€5.99</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010328186036.html" target="_blank">Acheter</a>
+      <img src="https://via.placeholder.com/400x260.png?text=Produit+1" alt="Titre produit 1">
+      <h3>Voile avec attache</h3>
+      <p class="price">€5.00</p>
+      <a class="btn" href="#" target="_blank">Acheter</a>
     </div>
 
     <div class="product-card">
-      <img src="images/voile_noire.jpg" alt="Voile noire">
+      <img src="https://via.placeholder.com/400x260.png?text=Produit+2" alt="Titre produit 2">
       <h3>Voile noire</h3>
-      <p class="price">€0.99</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005007250703766.html" target="_blank">Acheter</a>
+      <p class="price">€3.88</p>
+      <a class="btn" href="#" target="_blank">Acheter</a>
     </div>
 
-    <div class="product-card">
-      <img src="images/voile_marron.jpg" alt="Voile marron">
-      <h3>Voile marron</h3>
-      <p class="price">€0.99</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005007250703766.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/glosse_hydratant.jpg" alt="Glosse hydratant">
-      <h3>Glosse hydratant</h3>
-      <p class="price">€26.79</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010351488064.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/bottes_impermeable_logo.jpg" alt="Bottes imperméable tendance logo de marque">
-      <h3>Bottes imperméable tendance logo de marque</h3>
-      <p class="price">€89.69</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010643455708.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/bottes_neige.jpg" alt="Bottes de neige imperméable">
-      <h3>Bottes de neige imperméable</h3>
-      <p class="price">€46.06</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010759693386.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/veste_cuir_bombardier.jpg" alt="Veste en cuir bombardier">
-      <h3>Veste en cuir bombardier</h3>
-      <p class="price">€19.89</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009919784601.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/veste_zip_femme.jpg" alt="Veste à fermeture éclair pour femme">
-      <h3>Veste à fermeture éclair pour femme</h3>
-      <p class="price">€8.29</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009011652372.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/veste_cuir_noir_rabat.jpg" alt="Veste en cuir noir col rabattable">
-      <h3>Veste en cuir noir col rabattable</h3>
-      <p class="price">€23.99</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010036952521.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/pantalon_ballons.jpg" alt="Pantalon ballons plissé taille haute">
-      <h3>Pantalon ballons plissé taille haute</h3>
-      <p class="price">€23.99</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010036952521.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/veste_courte_vert_gris.jpg" alt="Veste courte à col vert gris">
-      <h3>Veste courte à col vert gris</h3>
-      <p class="price">€26.79</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010351488064.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/tshirt_asymetrique.jpg" alt="T-shirt fond asymétrique">
-      <h3>T-shirt fond asymétrique</h3>
-      <p class="price">€26.79</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010351488064.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/voile_jersey_hijab.jpg" alt="Voile jersey instantané hijab">
-      <h3>Voile jersey instantané hijab</h3>
-      <p class="price">€26.79</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010351488064.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/tshirt_dentelle_asym.jpg" alt="T-shirt dentelle asymétrique femme">
-      <h3>T-shirt dentelle asymétrique femme</h3>
-      <p class="price">€26.79</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010351488064.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/veste_blazer_noire.jpg" alt="Veste blazer noire coupe col V">
-      <h3>Veste blazer noire coupe col V</h3>
-      <p class="price">€--</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010177877201.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/veste_poids_noir.jpg" alt="Veste à poids noir">
-      <h3>Veste à poids noir</h3>
-      <p class="price">€6.09</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009613676654.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/manteau_fourrure.jpg" alt="Manteau manche à détails fourrure">
-      <h3>Manteau manche à détails fourrure</h3>
-      <p class="price">€14.79</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009827794334.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/fourrure_marron.jpg" alt="Fourrure marron">
-      <h3>Fourrure marron</h3>
-      <p class="price">€30.39</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009724404567.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="images/sac_lara.jpg" alt="Sac cuir Lara">
-      <h3>Sac cuir Lara</h3>
-      <p class="price">€--</p>
-      <a class="btn" href="URL_DU_LIEN_LARA" target="_blank">Acheter</a>
-    </div>
-
+    <!-- Tu ajoutes les autres produits ici avec le même format -->
   </div>
+</section>
+
+<section class="section" id="access">
+  <h2>Accessoires</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Bijoux & détails</div>
+        <div class="card-text">Petits accessoires pour un style girly parfait</div>
+        <a class="btn" href="#" target="_blank">Voir</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Coques & gadgets</div>
+        <div class="card-text">Coques stylées, pratiques et tendances</div>
+        <a class="btn" href="#" target="_blank">Voir</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email : kawther-bmdhk@hotmail.com</p>
+  <p>Pinterest : <a href="https://pin.it/S8umJ0eeK" target="_blank">Jasmin Shop</a></p>
 </section>
 
 <footer>
