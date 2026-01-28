@@ -4,18 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jasmin Shop</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 <style>
 :root{
   --rose-fuchsia:#ff2b8a;
+  --rose-clair:#ffd1e8;
   --vert-matcha:#9ccf6d;
   --text:#1f1f1f;
   --border:#f4d6e2;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:'Poppins',sans-serif;
   color:var(--text);
@@ -27,6 +26,7 @@ body{
       var(--vert-matcha) 30px,
       var(--vert-matcha) 60px
     );
+  background-size: 100% 100%;
 }
 
 header{
@@ -76,6 +76,7 @@ nav a{
 .hero{
   padding:90px 18px 50px;
   text-align:center;
+  background: linear-gradient(135deg, rgba(255,43,138,0.15), rgba(156,207,109,0.15));
   color:#fff;
 }
 .hero h1{
@@ -83,7 +84,6 @@ nav a{
   font-size:60px;
   margin-bottom:12px;
   color:var(--rose-fuchsia);
-  animation: fadeIn 1s ease-in-out;
 }
 .hero p{
   font-size:18px;
@@ -135,20 +135,11 @@ nav a{
   overflow:hidden;
   box-shadow:0 12px 30px rgba(0,0,0,0.08);
   text-align:center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.product-card:hover{
-  transform: translateY(-6px);
-  box-shadow:0 18px 40px rgba(0,0,0,0.15);
 }
 .product-card img{
   width:100%;
   height:260px;
   object-fit:cover;
-  transition: transform 0.3s;
-}
-.product-card:hover img{
-  transform: scale(1.05);
 }
 .product-card h3{
   font-family:'Dancing Script', cursive;
@@ -180,11 +171,6 @@ footer p{
   .products{grid-template-columns:1fr;}
   .hero h1{font-size:46px;}
 }
-
-@keyframes fadeIn{
-  from{opacity:0; transform: translateY(-20px);}
-  to{opacity:1; transform: translateY(0);}
-}
 </style>
 </head>
 <body>
@@ -201,75 +187,152 @@ footer p{
 <section class="hero">
   <h1>Beauté & style en mode girly</h1>
   <p>Coques, accessoires et petites trouvailles girly 💗</p>
-  <div class="cta">
-    <a class="btn btn-primary" href="https://fr.aliexpress.com/item/1005010096975013.html" target="_blank">Voir la coque ventouse</a>
-    <a class="btn btn-primary" href="https://fr.aliexpress.com/item/1005006974079958.html" target="_blank">Voir le foulard</a>
-  </div>
 </section>
 
 <section class="section" id="shop">
   <h2>Nos sélections</h2>
   <div class="products">
+
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1Y5Z0b4naK1RjSZFtq6yYdVXat.jpg" alt="Coque ventouse rose">
-      <h3>Coque ventouse rose</h3>
+      <img src="https://ae01.alicdn.com/kf/1005010328186036.jpg" alt="Voile avec attache gris">
+      <h3>Voile avec attache Gris 5 étoiles</h3>
+      <p class="price">€5.99</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010328186036.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005007250703766.jpg" alt="Voile noire">
+      <h3>Voile noire</h3>
       <p class="price">€0.99</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010096975013.html" target="_blank">Acheter</a>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005007250703766.html" target="_blank">Acheter</a>
     </div>
 
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Foulard rose et bleu">
-      <h3>Foulard rose et bleu</h3>
-      <p class="price">€1.14</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005006974079958.html" target="_blank">Acheter</a>
-    </div>
-
-    <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1eKfQb6zuK1Rjy0Fpq6yEpFXaT.jpg" alt="Porte clé étoile mousse">
-      <h3>Porte clé étoile mousse</h3>
+      <img src="https://ae01.alicdn.com/kf/1005007250703766.jpg" alt="Voile marron">
+      <h3>Voile marron</h3>
       <p class="price">€0.99</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009913120132.html" target="_blank">Acheter</a>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005007250703766.html" target="_blank">Acheter</a>
     </div>
 
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1loro1XXXXXX.jpg" alt="Sac à main Saclala">
-      <h3>Sac à main Saclala</h3>
-      <p class="price">€223.69</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010675497010.html" target="_blank">Acheter</a>
+      <img src="https://ae01.alicdn.com/kf/1005010351488064.jpg" alt="Glosse hydratant">
+      <h3>Glosse hydratant</h3>
+      <p class="price">€26.79</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010351488064.html" target="_blank">Acheter</a>
     </div>
 
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1loro2XXXXXX.jpg" alt="Sac Loro jaune">
-      <h3>Sac Loro jaune</h3>
-      <p class="price">€54.99</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009708176265.html" target="_blank">Acheter</a>
+      <img src="https://ae01.alicdn.com/kf/1005010643455708.jpg" alt="Bottes imperméables logo">
+      <h3>Bottes imperméables tendance logo</h3>
+      <p class="price">€89.69</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010643455708.html" target="_blank">Acheter</a>
     </div>
 
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1loro3XXXXXX.jpg" alt="Sac Loro marron nubuc">
-      <h3>Sac Loro marron nubuc</h3>
-      <p class="price">€35.19</p>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005010425463330.html" target="_blank">Acheter</a>
+      <img src="https://ae01.alicdn.com/kf/1005010759693386.jpg" alt="Bottes de neige">
+      <h3>Bottes de neige imperméables</h3>
+      <p class="price">€46.06</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010759693386.html" target="_blank">Acheter</a>
     </div>
 
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1pullXXXXXX.jpg" alt="Pull à zip vert intérieur jaune">
-      <h3>Pull à zip vert intérieur jaune</h3>
+      <img src="https://ae01.alicdn.com/kf/1005009919784601.jpg" alt="Veste bombardier cuir">
+      <h3>Veste en cuir bombardier</h3>
+      <p class="price">€19.89</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005009919784601.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005009011652372.jpg" alt="Veste femme zip">
+      <h3>Veste à fermeture éclair pour femme</h3>
+      <p class="price">€8.29</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005009011652372.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005010036952521.jpg" alt="Veste cuir noir col rabatable">
+      <h3>Veste en cuir noir col rabattable</h3>
+      <p class="price">€23.99</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010036952521.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005010036952521.jpg" alt="Pantalon ballon plissé">
+      <h3>Pantalon ballon plissé taille haute</h3>
+      <p class="price">€23.99</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010036952521.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005010351488064.jpg" alt="Veste courte col vert gris">
+      <h3>Veste courte à col vert gris</h3>
+      <p class="price">€26.79</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010351488064.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005010351488064.jpg" alt="T-shirt fond asymétrique">
+      <h3>T-shirt fond asymétrique</h3>
+      <p class="price">€26.79</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010351488064.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005010351488064.jpg" alt="Voile jersey hijab">
+      <h3>Voile jersey instantané hijab</h3>
+      <p class="price">€26.79</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010351488064.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005010351488064.jpg" alt="T-shirt dentelle asymétrique">
+      <h3>T-shirt dentelle asymétrique femme</h3>
+      <p class="price">€26.79</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010351488064.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005010177877201.jpg" alt="Veste blazer noire col V">
+      <h3>Veste blazer noire coupe Col V</h3>
+      <p class="price">€??</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010177877201.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005009613676654.jpg" alt="Veste à poids noir">
+      <h3>Veste à poids noir</h3>
+      <p class="price">€6.09</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005009613676654.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005009827794334.jpg" alt="Manteau manche fourrure">
+      <h3>Manteau manches à détails fourrure</h3>
+      <p class="price">€14.79</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005009827794334.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005009724404567.jpg" alt="Fourrure marron">
+      <h3>Fourrure marron</h3>
+      <p class="price">€30.39</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005009724404567.html" target="_blank">Acheter</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://ae01.alicdn.com/kf/1005010307382550.jpg" alt="Pull zip vert intérieur jaune">
+      <h3>Pull zip vert intérieur jaune</h3>
       <p class="price">€18.49</p>
       <a class="btn" href="https://fr.aliexpress.com/item/1005010307382550.html" target="_blank">Acheter</a>
     </div>
-  </div>
-</section>
 
-<section class="section" id="access">
-  <h2>Accessoires</h2>
-  <div class="products">
     <div class="product-card">
-      <img src="https://ae01.alicdn.com/kf/HTB1BijouxXXXXXX.jpg" alt="Bijoux et détails">
-      <h3>Bijoux & détails</h3>
-      <p class="price">–</p>
-      <a class="btn" href="#" target="_blank">Voir</a>
+      <img src="https://ae01.alicdn.com/kf/1005010177877201.jpg" alt="Sac Lara cuir">
+      <h3>Sac Lara cuir</h3>
+      <p class="price">€??</p>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010177877201.html" target="_blank">Acheter</a>
     </div>
+
   </div>
 </section>
 
