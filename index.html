@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jasmin Shop</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -33,7 +33,7 @@
   }
 
   header{
-    padding:18px 18px;
+    padding:18px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -46,7 +46,7 @@
   }
 
   .logo{
-    font-family:'Poppins', sans-serif;
+    font-family:'Dancing Script', cursive;
     font-size:34px;
     font-weight:700;
     color:var(--rose-fuchsia);
@@ -84,6 +84,7 @@
     color:#fff;
   }
   .hero h1{
+    font-family:'Dancing Script', cursive;
     font-size:60px;
     margin-bottom:12px;
     color:var(--rose-fuchsia);
@@ -119,6 +120,7 @@
     padding:40px 18px;
   }
   .section h2{
+    font-family:'Dancing Script', cursive;
     font-size:34px;
     margin-bottom:18px;
     color:var(--rose-fuchsia);
@@ -136,6 +138,7 @@
     border-radius:24px;
     overflow:hidden;
     text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
     transition: all 0.4s ease;
   }
   .product-card:hover, .carousel-item:hover{
@@ -143,40 +146,22 @@
     box-shadow:0 18px 40px rgba(0,0,0,0.15);
   }
 
-  .product-card img{
+  .product-card img, .carousel-item img{
     width:100%;
     height:260px;
     object-fit:cover;
-  }
-  .product-card h3{
-    font-size:24px;
-    margin:14px 0 8px;
-    color:var(--rose-fuchsia);
-  }
-  .product-card .btn{
-    margin-bottom:18px;
-  }
-
-  .carousel{
-    display:flex;
-    overflow-x:auto;
-    gap:12px;
-    padding-bottom:12px;
-    scroll-behavior: smooth;
-  }
-  .carousel::-webkit-scrollbar{
-    display:none;
-  }
-  .carousel-item img{
-    width:100%;
-    height:150px;
-    object-fit:cover;
     border-bottom:1px solid var(--border);
   }
-  .carousel-item h3{
-    font-size:18px;
-    margin:10px 0;
+
+  .product-card h3, .carousel-item h3{
+    font-family:'Dancing Script', cursive;
+    font-size:20px;
+    margin:12px 0;
     color:var(--rose-fuchsia);
+  }
+
+  .product-card .btn, .carousel-item .btn{
+    margin-bottom:18px;
   }
 
   footer{
@@ -191,9 +176,7 @@
   }
 
   @media(max-width:900px){
-    .products{grid-template-columns:1fr;}
-    .carousel{flex-wrap:wrap;}
-    .hero h1{font-size:46px;}
+    .products, .carousel{grid-template-columns:1fr;}
   }
 </style>
 </head>
@@ -212,10 +195,6 @@
 <section class="hero">
   <h1>Beauté & style en mode girly</h1>
   <p>Coques, accessoires et petites trouvailles girly 💗</p>
-  <div class="cta">
-    <a class="btn btn-primary" href="#" target="_blank">Acheter la coque</a>
-    <a class="btn" href="#" target="_blank">Voir le foulard</a>
-  </div>
 </section>
 
 <!-- Vêtements -->
@@ -225,32 +204,32 @@
     <div class="product-card">
       <img src="images/blazer-col-v.jpg" alt="Blazer col V">
       <h3>Blazer col V</h3>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009995731661.html" target="_blank">Voir</a>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005009936139322.html" target="_blank">Voir</a>
     </div>
     <div class="product-card">
       <img src="images/tshirt-asymetrique.jpg" alt="T-shirt asymétrique">
       <h3>T-shirt asymétrique</h3>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009936139322.html" target="_blank">Voir</a>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005009676852764.html" target="_blank">Voir</a>
     </div>
     <div class="product-card">
       <img src="images/tshirt-dentelle-asymetrique.jpg" alt="T-shirt dentelle asymétrique">
       <h3>T-shirt dentelle asymétrique</h3>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009936139322.html" target="_blank">Voir</a>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005008737264509.html" target="_blank">Voir</a>
     </div>
     <div class="product-card">
       <img src="images/veste-courte-col-vert-gris.jpg" alt="Veste courte col vert gris">
       <h3>Veste courte col vert gris</h3>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009676852764.html" target="_blank">Voir</a>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005006974079958.html" target="_blank">Voir</a>
     </div>
     <div class="product-card">
       <img src="images/veste-cuir-bombardier.jpg" alt="Veste cuir bombardier">
       <h3>Veste cuir bombardier</h3>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009676852764.html" target="_blank">Voir</a>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005010096975013.html" target="_blank">Voir</a>
     </div>
     <div class="product-card">
-      <img src="images/veste-cuir-col-detail.jpg" alt="Veste cuir col détail">
-      <h3>Veste cuir col détail</h3>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009676852764.html" target="_blank">Voir</a>
+      <img src="images/veste-cuir-col-detail.jpg" alt="Veste cuir col détails">
+      <h3>Veste cuir col détails</h3>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005009995731661.html" target="_blank">Voir</a>
     </div>
     <div class="product-card">
       <img src="images/veste-fermeture-eclair.jpg" alt="Veste fermeture éclair">
@@ -277,7 +256,19 @@
     <div class="product-card">
       <img src="images/bottes-neige-impermeables.jpg" alt="Bottes de neige imperméables">
       <h3>Bottes de neige imperméables</h3>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009936139322.html" target="_blank">Voir</a>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005009676852764.html" target="_blank">Voir</a>
+    </div>
+  </div>
+</section>
+
+<!-- Carrousel Pub -->
+<section class="section">
+  <h2>Nos coups de cœur Smile</h2>
+  <div class="products">
+    <div class="carousel-item">
+      <img src="images/diamond-smile.jpg" alt="Diamond Smile Pub">
+      <h3>Diamond Smile</h3>
+      <a class="btn btn-primary" href="https://www.awin1.com/cread.php?awinmid=27135&awinaffid=2744570&ued=https%3A%2F%2Fkawther-bmdhk-ops.github.io%2FMon-mini-site%2F" target="_blank">Voir</a>
     </div>
   </div>
 </section>
@@ -297,12 +288,12 @@
       <a class="btn" href="https://fr.aliexpress.com/item/1005006974079958.html" target="_blank">Voir</a>
     </div>
     <div class="product-card">
-      <img src="images/coque1.jpg" alt="Coque ventouse">
+      <img src="images/coque-accessoires.jpg" alt="Coque ventouse">
       <h3>Coque ventouse</h3>
       <a class="btn" href="https://fr.aliexpress.com/item/1005009995731661.html" target="_blank">Voir</a>
     </div>
     <div class="product-card">
-      <img src="images/coque2.jpg" alt="Coque ventouse blanche souk">
+      <img src="images/coque1.jpg" alt="Coque ventouse blanche souk">
       <h3>Coque ventouse blanche souk</h3>
       <a class="btn" href="https://fr.aliexpress.com/item/1005010096975013.html" target="_blank">Voir</a>
     </div>
@@ -324,19 +315,7 @@
     <div class="product-card">
       <img src="images/trois-bracelet1.jpg" alt="Trois bracelets">
       <h3>Trois bracelets</h3>
-      <a class="btn" href="https://fr.aliexpress.com/item/1005009936139322.html" target="_blank">Voir</a>
-    </div>
-  </div>
-</section>
-
-<!-- Carrousel de pubs Smile -->
-<section class="section">
-  <h2>Nos coups de cœur Smile</h2>
-  <div class="carousel">
-    <div class="carousel-item">
-      <img src="images/diamond-smile.jpg" alt="Diamond Smile">
-      <h3>Diamond Smile</h3>
-      <a class="btn btn-primary" href="https://www.awin1.com/cread.php?awinmid=27135&awinaffid=2744570&ued=https%3A%2F%2Fkawther-bmdhk-ops.github.io%2FMon-mini-site%2F" target="_blank">Voir</a>
+      <a class="btn" href="https://fr.aliexpress.com/item/1005009913120132.html" target="_blank">Voir</a>
     </div>
   </div>
 </section>
