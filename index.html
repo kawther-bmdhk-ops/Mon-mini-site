@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jasmin Shop</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 <style>
 :root{
   --rose-fuchsia:#ff2b8a;
@@ -14,35 +12,30 @@
   --text:#1f1f1f;
   --border:#f4d6e2;
 }
-
-*{margin:0;padding:0;box-sizing:border-box; transition: all 0.3s ease;}
+*{margin:0;padding:0;box-sizing:border-box;transition:all 0.3s ease;}
 body{
   font-family:'Poppins',sans-serif;
   color:var(--text);
-  background: repeating-linear-gradient(45deg, #ffffff 0px, #ffffff 30px, var(--vert-matcha) 30px, var(--vert-matcha) 60px);
-  overflow-x:hidden;
+  background:repeating-linear-gradient(45deg,#fff 0,#fff 30px,var(--vert-matcha) 30px,var(--vert-matcha) 60px);
 }
-
 header{
   padding:18px;
   display:flex;
   justify-content:space-between;
   align-items:center;
   background:rgba(255,255,255,0.75);
-  backdrop-filter: blur(10px);
+  backdrop-filter:blur(10px);
   position:sticky;
   top:0;
   z-index:10;
   border-bottom:1px solid var(--border);
 }
-
 .logo{
   font-family:'Dancing Script', cursive;
   font-size:36px;
   font-weight:700;
   color:var(--rose-fuchsia);
 }
-
 nav a{
   margin-left:16px;
   text-decoration:none;
@@ -50,7 +43,6 @@ nav a{
   font-weight:600;
   font-size:14px;
 }
-
 .btn{
   padding:10px 14px;
   border:2px solid var(--rose-fuchsia);
@@ -67,7 +59,6 @@ nav a{
   color:#fff;
   transform: scale(1.05);
 }
-
 .section{
   padding:40px 18px;
 }
@@ -76,15 +67,12 @@ nav a{
   font-size:34px;
   margin-bottom:18px;
   color:var(--rose-fuchsia);
-  animation: fadeIn 1s ease forwards;
 }
-
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
   gap:18px;
 }
-
 .card, .product-card{
   background:rgba(255,255,255,0.85);
   border:2px solid var(--border);
@@ -103,48 +91,30 @@ nav a{
   height:200px;
   object-fit:cover;
 }
-
 .card h3, .product-card h3{
   font-family:'Dancing Script', cursive;
   font-size:20px;
   margin:12px 0 8px;
   color:var(--rose-fuchsia);
 }
-
 .carousel{
   display:flex;
   gap:12px;
   overflow-x:auto;
   padding-bottom:12px;
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
-.carousel::-webkit-scrollbar{
-  display:none;
-}
-.carousel .card{
-  flex:0 0 auto;
-  width:200px;
-}
-
+.carousel::-webkit-scrollbar{display:none;}
+.carousel .card{flex:0 0 auto;width:200px;}
 footer{
   padding:25px 18px;
   background:rgba(255,255,255,0.85);
   border-top:1px solid var(--border);
   text-align:center;
 }
-
-footer p{
-  color:#777;
-  font-size:14px;
-}
-
-@keyframes fadeIn{
-  0%{opacity:0;}
-  100%{opacity:1;}
-}
+footer p{color:#777;font-size:14px;}
 </style>
 </head>
-
 <body>
 
 <header>
@@ -155,152 +125,151 @@ footer p{
     <a href="#smile">Smile</a>
     <a href="#access">Accessoires</a>
     <a href="#lunettes">Lunettes</a>
-    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <!-- VÊTEMENTS -->
 <section class="section" id="vetements">
-  <h2>Vêtements</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="images/blazer-col-v.jpg" alt="Blazer col V">
-      <h3>Blazer col V</h3>
-      <a class="btn" href="LIEN_ALI_1" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/tshirt-asymetrique.jpg" alt="T-shirt asymétrique">
-      <h3>T-shirt asymétrique</h3>
-      <a class="btn" href="LIEN_ALI_2" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/tshirt-dentelle-asymetrique.jpg" alt="T-shirt dentelle asymétrique">
-      <h3>T-shirt dentelle asymétrique</h3>
-      <a class="btn" href="LIEN_ALI_3" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/veste-courte-col-vert-gris.jpg" alt="Veste courte col vert gris">
-      <h3>Veste courte col vert gris</h3>
-      <a class="btn" href="LIEN_ALI_4" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/veste-cuir-bombardier.jpg" alt="Veste cuir bombardier">
-      <h3>Veste cuir bombardier</h3>
-      <a class="btn" href="LIEN_ALI_5" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/veste-cuir-col-detail.jpg" alt="Veste cuir col détail">
-      <h3>Veste cuir col détail</h3>
-      <a class="btn" href="LIEN_ALI_6" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/veste-fermeture-eclair.jpg" alt="Veste fermeture éclair">
-      <h3>Veste fermeture éclair</h3>
-      <a class="btn" href="LIEN_ALI_7" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/veste-poids-noir.jpg" alt="Veste poids noir">
-      <h3>Veste poids noir</h3>
-      <a class="btn" href="LIEN_ALI_8" target="_blank">Voir</a>
-    </div>
+<h2>Vêtements</h2>
+<div class="grid">
+  <div class="card">
+    <img src="images/blazer-col-v.jpg" alt="Blazer col V">
+    <h3>Blazer col V</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F1005010726482426.html" target="_blank">Voir</a>
   </div>
+  <div class="card">
+    <img src="images/tshirt-asymetrique.jpg" alt="T-shirt asymétrique">
+    <h3>T-shirt asymétrique</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F1005010570041249.html" target="_blank">Voir</a>
+  </div>
+  <div class="card">
+    <img src="images/tshirt-dentelle-asymetrique.jpg" alt="T-shirt dentelle asymétrique">
+    <h3>T-shirt dentelle asymétrique</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F1005010669564417.html" target="_blank">Voir</a>
+  </div>
+  <div class="card">
+    <img src="images/veste-courte-col-vert-gris.jpg" alt="Veste courte col vert gris">
+    <h3>Veste courte col vert gris</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F1005010351488064.html" target="_blank">Voir</a>
+  </div>
+  <div class="card">
+    <img src="images/veste-cuir-bombardier.jpg" alt="Veste cuir bombardier">
+    <h3>Veste cuir bombardier</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F1005009919784601.html" target="_blank">Voir</a>
+  </div>
+  <div class="card">
+    <img src="images/veste-cuir-col-detail.jpg" alt="Veste cuir col détail">
+    <h3>Veste cuir col détail</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F1005010036952521.html" target="_blank">Voir</a>
+  </div>
+  <div class="card">
+    <img src="images/veste-fermeture-eclair.jpg" alt="Veste fermeture éclair">
+    <h3>Veste fermeture éclair</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F1005009011652372.html" target="_blank">Voir</a>
+  </div>
+  <div class="card">
+    <img src="images/veste-poids-noir.jpg" alt="Veste poids noir">
+    <h3>Veste poids noir</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F1005009613676654.html" target="_blank">Voir</a>
+  </div>
+</div>
 </section>
 
 <!-- CHAUSSURES -->
 <section class="section" id="chaussures">
-  <h2>Chaussures</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="images/botte-logo.jpg" alt="Bottes logo">
-      <h3>Bottes logo</h3>
-      <a class="btn" href="LIEN_ALI_9" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/bottes-neige-impermeables.jpg" alt="Bottes de neige imperméables">
-      <h3>Bottes de neige imperméables</h3>
-      <a class="btn" href="LIEN_ALI_10" target="_blank">Voir</a>
-    </div>
+<h2>Chaussures</h2>
+<div class="grid">
+  <div class="card">
+    <img src="images/botte-logo.jpg" alt="Bottes logo">
+    <h3>Bottes logo</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F1005010643455708.html" target="_blank">Voir</a>
   </div>
+  <div class="card">
+    <img src="images/bottes-neige-impermeables.jpg" alt="Bottes de neige imperméables">
+    <h3>Bottes de neige imperméables</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F1005010759693386.html" target="_blank">Voir</a>
+  </div>
+</div>
 </section>
 
 <!-- PUB SMILE -->
 <section class="section" id="smile">
-  <h2>Smile – Nos coups de cœur</h2>
-  <div class="carousel">
-    <div class="card">
-      <img src="images/diamond-smile.jpg" alt="Diamond Smile">
-      <h3>Diamond Smile</h3>
-      <a class="btn" href="LIEN_AWIN_SMILE" target="_blank">Découvrir</a>
-    </div>
+<h2>Smile – Nos coups de cœur</h2>
+<div class="carousel">
+  <div class="card">
+    <img src="images/diamond-smile.jpg" alt="Diamond Smile">
+    <h3>Diamond Smile</h3>
+    <a class="btn" href="https://www.awin1.com/cread.php?awinmid=27135&awinaffid=2484215&ued=URL_DE_LA_PAGE_SMILE" target="_blank" rel="nofollow sponsored">Découvrir</a>
   </div>
+</div>
 </section>
 
 <!-- ACCESSOIRES -->
 <section class="section" id="access">
-  <h2>Accessoires</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="images/foulard1.jpg" alt="Foulard rose">
-      <h3>Foulard rose</h3>
-      <a class="btn" href="LIEN_ALI_11" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/foulard2.jpg" alt="Foulard bleu">
-      <h3>Foulard bleu</h3>
-      <a class="btn" href="LIEN_ALI_12" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/coque1.jpg" alt="Coque ventouse">
-      <h3>Coque ventouse</h3>
-      <a class="btn" href="LIEN_ALI_13" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/coque2.jpg" alt="Coque ventouse blanche souk">
-      <h3>Coque ventouse blanche souk</h3>
-      <a class="btn" href="LIEN_ALI_14" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/trois-bracelet1.jpg" alt="Bracelets 3 couleurs">
-      <h3>Bracelets 3 couleurs</h3>
-      <a class="btn" href="LIEN_ALI_15" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/sac-lara2.jpg" alt="Sac Lara">
-      <h3>Sac Lara</h3>
-      <a class="btn" href="LIEN_ALI_16" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/sac-nubuc.jpg" alt="Sac Nubuck">
-      <h3>Sac Nubuck</h3>
-      <a class="btn" href="LIEN_ALI_17" target="_blank">Voir</a>
-    </div>
+<h2>Accessoires</h2>
+<div class="grid">
+  <div class="card">
+    <img src="images/foulard1.jpg" alt="Foulard rose">
+    <h3>Foulard rose</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https://fr.aliexpress.com/item/1005008737264509.html" target="_blank">Voir</a>
   </div>
+  <div class="card">
+    <img src="images/foulard2.jpg" alt="Foulard bleu">
+    <h3>Foulard bleu</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https://fr.aliexpress.com/item/1005006974079958.html" target="_blank">Voir</a>
+  </div>
+  <div class="card">
+    <img src="images/coque1.jpg" alt="Coque ventouse">
+    <h3>Coque ventouse</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https://fr.aliexpress.com/item/1005009995731661.html" target="_blank">Voir</a>
+  </div>
+  <div class="card">
+    <img src="images/coque2.jpg" alt="Coque ventouse blanche souk">
+    <h3>Coque ventouse blanche souk</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https://fr.aliexpress.com/item/1005010096975013.html" target="_blank">Voir</a>
+  </div>
+  <div class="card">
+    <img src="images/trois-bracelet1.jpg" alt="Bracelets 3 couleurs">
+    <h3>Bracelets 3 couleurs</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https://fr.aliexpress.com/item/1005009936139322.html" target="_blank">Voir</a>
+  </div>
+  <div class="card">
+    <img src="images/sac-lara2.jpg" alt="Sac Lara">
+    <h3>Sac Lara</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https://fr.aliexpress.com/item/1005009708176265.html" target="_blank">Voir</a>
+  </div>
+  <div class="card">
+    <img src="images/sac-nubuc.jpg" alt="Sac Nubuck">
+    <h3>Sac Nubuck</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https://fr.aliexpress.com/item/1005010425463330.html" target="_blank">Voir</a>
+  </div>
+</div>
 </section>
 
 <!-- LUNETTES -->
 <section class="section" id="lunettes">
-  <h2>Lunettes de soleil</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="images/lunette-leopard.jpg" alt="Lunette léopard">
-      <h3>Lunette léopard</h3>
-      <a class="btn" href="LIEN_ALI_18" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/lunette-boucle-oreille.jpg" alt="Lunette boucle d’oreille">
-      <h3>Lunette boucle d’oreille</h3>
-      <a class="btn" href="LIEN_ALI_19" target="_blank">Voir</a>
-    </div>
-    <div class="card">
-      <img src="images/lunette-mimi.jpg" alt="Lunette mimi">
-      <h3>Lunette mimi</h3>
-      <a class="btn" href="LIEN_ALI_20" target="_blank">Voir</a>
-    </div>
+<h2>Lunettes de soleil</h2>
+<div class="grid">
+  <div class="card">
+    <img src="images/lunette-leopard.jpg" alt="Lunette léopard">
+    <h3>Lunette léopard</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https://fr.aliexpress.com/item/1005007418119641.html" target="_blank">Voir</a>
   </div>
+  <div class="card">
+    <img src="images/lunette-boucle-oreille.jpg" alt="Lunette boucle d’oreille">
+    <h3>Lunette boucle d’oreille</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https://fr.aliexpress.com/item/1005007418119641.html" target="_blank">Voir</a>
+  </div>
+  <div class="card">
+    <img src="images/lunette-mimi.jpg" alt="Lunette mimi">
+    <h3>Lunette mimi</h3>
+    <a class="btn" href="https://rzekl.com/g/1e8d114494f0a78b365a16525dc3e8/?ulp=https://fr.aliexpress.com/item/1005009159050736.html" target="_blank">Voir</a>
+  </div>
+</div>
 </section>
 
 <footer>
-  <p>© 2026 Jasmin Shop • Boutique & Beauté</p>
+<p>© 2026 Jasmin Shop • Boutique & Beauté</p>
 </footer>
 
 </body>
